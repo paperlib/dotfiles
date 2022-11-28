@@ -52,7 +52,7 @@ vnoremap <c-c> y
 nnoremap <c-v> "0p
 inoremap <c-v> <esc>"0p
 " g'damn paste in command mode !!!
-cnoremap <c-v> <c-r>"
+cnoremap <c-v> <c-r>0
 
 set pastetoggle=<f5>
 
