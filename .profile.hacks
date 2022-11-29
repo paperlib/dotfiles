@@ -1,0 +1,6 @@
+
+# -- hack for VIM!
+# -- I want to use ctrl-v to paste, so please let me fall back to ctrl-q for visual mode.
+# -- https://stackoverflow.com/questions/21806168/vim-use-ctrl-q-for-visual-block-mode-in-vim-gnome
+stty start undef
+
