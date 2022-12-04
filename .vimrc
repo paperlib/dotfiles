@@ -88,8 +88,8 @@ let mapleader = " "
 
 " windows!
 " switch horizontal & vertical splits
-nnoremap <leader>. :windo wincmd H<cr>
-nnoremap <leader>- :windo wincmd K<cr>
+nnoremap <leader>h :windo wincmd H<cr>
+nnoremap <leader>k :windo wincmd K<cr>
 
 " switch between windows using ctrl-arrows!
 map <c-up> <c-w>k
@@ -97,3 +97,5 @@ map <c-down> <c-w>j
 map <c-right> <c-w>l
 map <c-left> <c-w>h
 
+" load personal, regional or machine specific hacks.
+source ~/.dotfiles/hacks/vim/keyboard.hacks.vim
