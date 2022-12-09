@@ -49,10 +49,15 @@ nnoremap <c-a> ggVG
 vnoremap <c-c> y
 " paste from what we last yanked, not from last deletions - do we want this?
 " https://stackoverflow.com/questions/11993851/how-to-delete-not-cut-in-vim
-nnoremap <c-v> "0p
-inoremap <c-v> <esc>"0p
-" g'damn paste in command mode !!!
-cnoremap <c-v> <c-r>0
+nnoremap x "_x
+nnoremap d "_d
+nnoremap D "_D
+vnoremap d "_d
+" and now setup the normal paste shortcuts.
+nnoremap <c-v> p
+inoremap <c-v> <esc>p
+" and ... g'damn paste in command mode !!!
+cnoremap <c-v> <c-r>+
 
 set pastetoggle=<f5>
 
@@ -98,4 +103,4 @@ map <c-right> <c-w>l
 map <c-left> <c-w>h
 
 " load personal, regional or machine specific hacks.
-source ~/.dotfiles/hacks/vim/keyboard.hacks.vim
+silent! source ~/.dotfiles/hacks/vim/keyboard.hacks.vim
