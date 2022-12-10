@@ -90,6 +90,9 @@ vnoremap <s-left> <left>
 " file browser defaults
 let g:netrw_banner    = 0
 let g:netrw_liststyle = 3
+" how to make netrw start with .files hidden ?
+" https://vi.stackexchange.com/q/18650 - WTF .
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
 let mapleader = " "
 
