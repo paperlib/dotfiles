@@ -87,6 +87,17 @@ vnoremap <s-down> <down>
 vnoremap <s-right> <right>
 vnoremap <s-left> <left>
 
+" https://www.reddit.com/r/vim/comments/165ot5/what_are_your_favorite_visual_mode_commandstricks
+" how cool would it be to simply *move* your selection left or right
+" with just the arrow keys? so let's configure just that ;-)
+vnoremap <right> >gv
+vnoremap <left>  <gv
+
+" and here the same for moving the selected text up & down
+" * stolen from ThePrimaegen here: https://youtu.be/w7i4amO_zaE?t=1530
+vnoremap <up>   :m '<-2<cr>gv=gv
+vnoremap <down> :m '>+1<cr>gv=gv
+
 " file browser defaults
 let g:netrw_banner    = 0
 " netrw list tree view (liststyle = 3) is super buggy (specially on Windows.)
@@ -109,6 +120,10 @@ map <c-up> <c-w>k
 map <c-down> <c-w>j
 map <c-right> <c-w>l
 map <c-left> <c-w>h
+
+" use this instead of <esc> in visual mode -------------.
+" somehow this reacts faster than hitting <esc> directly.
+vnoremap <leader><leader> <esc>
 
 " load personal, regional or machine specific hacks.
 silent! source ~/.dotfiles/hacks/vim/keyboard.hacks.vim
