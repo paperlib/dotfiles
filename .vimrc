@@ -127,6 +127,9 @@ map <c-down> <c-w>j
 map <c-right> <c-w>l
 map <c-left> <c-w>h
 
+" switch between buffers
+nnoremap <tab> :bn<cr>
+
 " use this instead of <esc> in visual mode -------------.
 " somehow this reacts faster than hitting <esc> directly.
 vnoremap <leader><leader> <esc>
