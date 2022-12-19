@@ -100,6 +100,7 @@ vnoremap <down> :m '>+1<cr>gv=gv
 
 " file browser defaults
 let g:netrw_banner    = 0
+let g:netrw_winsize   = 30
 " netrw list tree view (liststyle = 3) is super buggy (specially on Windows.)
 " https://www.reddit.com/r/neovim/comments/euxwou/netrw_strange_behavior_in_tree_view
 " https://www.reddit.com/r/vim/comments/22ztqp/why_does_nerdtree_exist_whats_wrong_with_netrw
@@ -109,6 +110,11 @@ let g:netrw_liststyle = 3 " on Windows never hit "-" (dash) or use liststyle=1.
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
 let mapleader = " "
+
+" toggle the file explorer (opens on the curreng working directory.)
+nnoremap <leader>dd :Lexplore<cr>
+" open the file explorer (on the directory of the current file.)
+nnoremap <leader>df :Lexplore %:p:h<cr>
 
 " windows!
 " switch horizontal & vertical splits
