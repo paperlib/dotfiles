@@ -76,6 +76,18 @@ cmap <esc>[B <down>
 cmap <esc>[C <right>
 cmap <esc>[D <left>
 
+" select using arrow keys - hack for putty!!! ---------------.
+" having this in main .vimrc bc it should work *everywhere!!!*
+nnoremap <esc>OA v<up>
+nnoremap <esc>OB v<down>
+nnoremap <esc>OC v<right>
+nnoremap <esc>OD v<left>
+
+vnoremap <esc>OA <up>
+vnoremap <esc>OB <down>
+vnoremap <esc>OC <right>
+vnoremap <esc>OD <left>
+
 " select using arrow keys!
 nnoremap <s-up> v<up>
 nnoremap <s-down> v<down>
