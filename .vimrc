@@ -47,6 +47,7 @@ set mouse=nv " -----------------------------------.
 set clipboard^=unnamed,unnamedplus " -------------.
 nnoremap <c-a> ggVG
 vnoremap <c-c> y
+vnoremap <c-x> d
 " paste from what we last yanked, not from last deletions - do we want this?
 " https://stackoverflow.com/questions/11993851/how-to-delete-not-cut-in-vim
 nnoremap x "_x
