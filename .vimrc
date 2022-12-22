@@ -35,6 +35,7 @@ set showmatch
 set hlsearch
 set incsearch
 set ignorecase
+set smartcase
 
 nmap <silent> ,. :nohlsearch<CR>
 
