@@ -30,12 +30,14 @@ set statusline+=%#StatusLine#%{!&modified?(&readonly?'[RO]':''):''}
 set statusline+=%#StatusLine#
 set statusline+=%{&readonly?'\ ':''}
 set statusline+=%m
+set statusline+=%{&modified?'\ ':''}
+set statusline+=%{&paste?'[paste]':''}
 set statusline+=%=
-set statusline+=%c%V
-set statusline+=,
-set statusline+=%l
-set statusline+=\ \ \ \ 
-set statusline+=%-04P
+set statusline+=%([%{&fileformat}]%)
+set statusline+=%([%{strlen(&fenc)?&fenc:'none'}]%)
+set statusline+=%y
+set statusline+=%9(%c,%l%)
+set statusline+=%7P
 
 " git branch
 let b:git_branch = ""
