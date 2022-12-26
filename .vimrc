@@ -64,7 +64,7 @@ inoremap <c-v> <esc>p
 cnoremap <c-v> <c-r>+
 
 set pastetoggle=<f5>
-map <silent> <f9> :let b:filemetaline=!b:filemetaline<cr>
+map <silent> <f9> :let b:filemetaline=!get(b:, 'filemetaline', 0)<cr>
 
 " arrow keys - hack for putty!!!
 " TODO: document what the fuck!!
@@ -108,7 +108,7 @@ let g:netrw_winsize   = 30
 " https://www.reddit.com/r/neovim/comments/euxwou/netrw_strange_behavior_in_tree_view
 " https://www.reddit.com/r/vim/comments/22ztqp/why_does_nerdtree_exist_whats_wrong_with_netrw
 let g:netrw_liststyle = 3 " on Windows never hit "-" (dash) or use liststyle=1.
-" how to make netrw start with .files hidden ?
+" how to make netrw start with .files hidden? - us *gh* to show hidden files.
 " https://vi.stackexchange.com/q/18650 (WTF again.)
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
