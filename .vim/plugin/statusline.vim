@@ -33,7 +33,7 @@ set statusline+=%m
 set statusline+=%{&modified?'\ ':''}
 set statusline+=%{&paste?'[paste]':''}
 set statusline+=%=
-set statusline+=%{%FileMetaLine(&filetype)%}
+set statusline+=%{FileMetaLine()}
 set statusline+=%9(%c,%l%)
 set statusline+=%7P
 
@@ -41,11 +41,11 @@ set statusline+=%7P
 " file format, encoding and type.
 let b:filemetaline = 0
 
-function! FileMetaLine(type)
+function! FileMetaLine()
   let l:filemetaline = get(b:, 'filemetaline', 0)
-  let l:metaline = "%{&fileformat} | %{strlen(&fenc)?&fenc:'none'} | %{&filetype}"
+  let l:metaline = &fileformat . " | " . (strlen(&fenc)?&fenc:'none') . " | " . &filetype
 
-  return l:filemetaline && a:type != 'netrw' ? l:metaline : ''
+  return l:filemetaline && &filetype != 'netrw' ? l:metaline : ''
 endfunction
 
 " git branch
