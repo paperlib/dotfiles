@@ -64,6 +64,7 @@ inoremap <c-v> <esc>p
 cnoremap <c-v> <c-r>+
 
 set pastetoggle=<f5>
+map <silent> <f9> :let b:filemetaline=!b:filemetaline<cr>
 
 " arrow keys - hack for putty!!!
 " TODO: document what the fuck!!

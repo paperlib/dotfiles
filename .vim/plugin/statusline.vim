@@ -6,7 +6,7 @@ hi VisualMode  cterm=bold,reverse
 hi CommandMode cterm=bold,reverse
 
 let g:currentmode={ "\<C-v>" : 'vb' }
- 
+
 set statusline=
 
 set statusline+=%#NormalMode#%{(mode()==#'n')?'\ \ N\ ':''}
@@ -33,11 +33,18 @@ set statusline+=%m
 set statusline+=%{&modified?'\ ':''}
 set statusline+=%{&paste?'[paste]':''}
 set statusline+=%=
-set statusline+=%([%{&fileformat}]%)
-set statusline+=%([%{strlen(&fenc)?&fenc:'none'}]%)
-set statusline+=%y
+set statusline+=%{%FileMetaLine()%}
 set statusline+=%9(%c,%l%)
 set statusline+=%7P
+
+" file details
+" file format, encoding and type.
+let b:filemetaline = 0
+
+function! FileMetaLine()
+  let l:metaline = "%{&fileformat} | %{strlen(&fenc)?&fenc:'none'} | %{&filetype}"
+  return b:filemetaline ? l:metaline : ''
+endfunction
 
 " git branch
 let b:git_branch = ""
