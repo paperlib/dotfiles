@@ -24,6 +24,17 @@ cmap <esc>[D <left>
 " Old putty = a putty without the xterm-style bitmap option   --.
 " -> and have it commented out bc it's for old putty anyway   --.
 " -> only enable if needed - ie. only if you only have old putty.
+" nnoremap <esc>[A v<up>
+" nnoremap <esc>[B v<down>
+" nnoremap <esc>[C v<right>
+" nnoremap <esc>[D v<left>
+
+" vnoremap <esc>[A <up>
+" vnoremap <esc>[B <down>
+" vnoremap <esc>[C <right>
+" vnoremap <esc>[D <left>
+
+" newer putty ... with xterm-bitmap enabled?
 nnoremap <esc>[1;2A v<up>
 nnoremap <esc>[1;2B v<down>
 nnoremap <esc>[1;2C v<right>
