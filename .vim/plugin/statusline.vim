@@ -34,7 +34,7 @@ set statusline+=%{&modified?'\ ':''}
 set statusline+=%{&paste?'[paste]':''}
 set statusline+=%=
 set statusline+=%{FileMetaLine()}
-set statusline+=%9(%c,%l%)
+set statusline+=\ %9(%c,%l%)
 set statusline+=%7P
 
 " file details
