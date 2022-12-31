@@ -91,6 +91,9 @@ vnoremap <down> :m '>+1<cr>gv=gv
 " file browser defaults
 let g:netrw_banner    = 0
 let g:netrw_winsize   = 30
+" https://stackoverflow.com/questions/14665170/netrw-open-files-into-tabs-in-opposite-vertical-window
+" https://vi.stackexchange.com/questions/20385/lexplore-and-split-windows
+let g:netrw_chgwin    = 2
 " netrw list tree view (liststyle = 3) is super buggy (specially on Windows.)
 " https://www.reddit.com/r/neovim/comments/euxwou/netrw_strange_behavior_in_tree_view
 " https://www.reddit.com/r/vim/comments/22ztqp/why_does_nerdtree_exist_whats_wrong_with_netrw
@@ -102,9 +105,9 @@ let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 let mapleader = " "
 
 " toggle the file explorer (opens on the curreng working directory.)
-nnoremap <leader>dd :Lexplore<cr>
+nnoremap <leader>. :Lexplore<cr>
 " open the file explorer (on the directory of the current file.)
-nnoremap <leader>df :Lexplore %:p:h<cr>
+nnoremap <leader>, :Lexplore %:p:h<cr>
 
 " windows!
 " switch horizontal & vertical splits
@@ -118,7 +121,8 @@ map <c-right> <c-w>l
 map <c-left> <c-w>h
 
 " switch between buffers
-nnoremap <tab> :bn<cr>
+nnoremap <expr> <tab>   &filetype != 'netrw' ? ':bn<cr>' : ''
+nnoremap <expr> <s-tab> &filetype != 'netrw' ? ':bp<cr>' : ''
 
 " use this instead of <esc> in visual mode -------------.
 " somehow this reacts faster than hitting <esc> directly.
