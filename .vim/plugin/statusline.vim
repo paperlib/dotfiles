@@ -43,7 +43,7 @@ let b:filemetaline = 0
 
 function! FileMetaLine()
   let l:filemetaline = get(b:, 'filemetaline', 0)
-  let l:metaline = &fileformat . " | " . (strlen(&fenc)?&fenc:'none') . " | " . &filetype
+  let l:metaline = &fileformat . " | " . (strlen(&fenc)?&fenc:'none') . " | " . (strlen(&filetype)?&filetype:'none')
 
   return l:filemetaline && &filetype != 'netrw' ? l:metaline : ''
 endfunction
