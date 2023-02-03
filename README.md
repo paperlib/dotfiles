@@ -12,7 +12,7 @@ muscle memory and brain power, I will do, so that I can then use that very memor
 So here we go ...
 
 ### .vimrc keyboard shortcuts :heart_on_fire:
-Starting with _I don't want to have to memorize yet another way to do a very plain, very normal.. copy/paste_!<br>
+Starting with _I don't want to have to memorize yet another set of copy/paste shortcuts_!<br>
 Wow! (great achievement.. I know..., no no..., I mean _really_ [I know...](https://github.com/paperlib/dotfiles/blob/d0989f85ab1a01018b7398a43686eb6c8e8ac8a1/.vimrc#L48))
 
 * Use <kbd>Ctrl</kbd> + <kbd>a</kbd> to select all
@@ -20,7 +20,15 @@ Wow! (great achievement.. I know..., no no..., I mean _really_ [I know...](https
 * Use <kbd>Ctrl</kbd> + <kbd>x</kbd> to cut selection
 * Use <kbd>Ctrl</kbd> + <kbd>v</kbd> to paste
 
-Ok so with that out of the way, here a few more helpful/basic shortcuts
+Ok so if we want to copy something, we need to select that something.
+How about being able to select like you would in any other editor?
+Yes yes, I mean like you know, using shift arrow keys
+* Use <kbd>⇧ Shift</kbd> + <kbd>↑</kbd> to start selecting from where you are upwards
+* Use <kbd>⇧ Shift</kbd> + <kbd>→</kbd> to start selecting from where you are leftwards
+* Use <kbd>⇧ Shift</kbd> + <kbd>↓</kbd> to start selecting from where you are downwards
+* Use <kbd>⇧ Shift</kbd> + <kbd>←</kbd> to start selecting from where you are rightwards
+
+With that out of the way, here a few more helpful/basic shortcuts
 * Use <kbd>,</kbd> + <kbd>.</kbd> to clear highlighted searches
 
 
