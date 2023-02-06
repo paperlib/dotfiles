@@ -13,14 +13,15 @@ So here we go ...
 
 ### :heart_on_fire: `.vimrc`: amazing keyboard shortcuts!
 Starting with _I don't want to have to memorize yet another set of copy/paste shortcuts_!<br>
-Wow! (great achievement.. I know..., no no..., I mean _really_ [I know...](https://github.com/paperlib/dotfiles/blob/d0989f85ab1a01018b7398a43686eb6c8e8ac8a1/.vimrc#L48))
 
 * Use <kbd>Ctrl</kbd> <kbd>a</kbd> to select all
 * Use <kbd>Ctrl</kbd> <kbd>c</kbd> to copy selection
 * Use <kbd>Ctrl</kbd> <kbd>x</kbd> to cut selection
 * Use <kbd>Ctrl</kbd> <kbd>v</kbd> to paste
 
-> Since <kbd>Ctrl</kbd> <kbd>v</kbd> is now used to paste, we use <kbd>Ctrl</kbd> <kbd>q</kbd> to switch to visual block mode.<br>
+Wow! (great achievement.. I know..., no no..., I mean _really_ [I know...](https://github.com/paperlib/dotfiles/blob/d0989f85ab1a01018b7398a43686eb6c8e8ac8a1/.vimrc#L48))
+
+> Btw since <kbd>Ctrl</kbd> <kbd>v</kbd> is now used to paste, we use <kbd>Ctrl</kbd> <kbd>q</kbd> to switch to visual block mode.<br>
 > Note: even though [Vim's documentation](https://vimhelp.org/gui_w32.txt.html#CTRL-V-alternative) states <kbd>Ctrl</kbd> <kbd>q</kbd>
 > can be used as an alternative to <kbd>Ctrl</kbd> <kbd>v</kbd>, terminals often have <kbd>Ctrl</kbd> <kbd>q</kbd> mapped to <code>stty&nbsp;start</code>,
 > so if you do want to be able to use this alternative, you have to disable <code>stty&nbsp;start</code> by adding a <code>stty&nbsp;start&nbsp;undef</code>
