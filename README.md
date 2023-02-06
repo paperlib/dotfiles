@@ -38,7 +38,7 @@ Yes yes, I mean like you know, using shift arrow keys
 > * <kbd>⇧ Shift</kbd> <kbd>→</kbd> + <kbd>$</kbd> will select everything on the current line from the cursor position until the end of the line.
 > * <kbd>⇧ Shift</kbd> <kbd>↓</kbd> + <kbd>G</kbd> will select everything from the current line to the end of the file.
 > * <kbd>⇧ Shift</kbd> <kbd>↑</kbd> + <kbd>g</kbd> + <kbd>g</kbd> to select from the current line to the top of the file
-> * etc etc etc. :smile:
+> * etc etc etc you got the point :smile:
 
 With that out of the way, here a few more helpful/basic shortcuts
 * Use <kbd>,</kbd> + <kbd>.</kbd> to clear highlighted searches
