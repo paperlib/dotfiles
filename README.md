@@ -51,7 +51,7 @@ if you want to see it in action.)
 With that out of the way, here a few more helpful/basic shortcuts
 * Use <kbd>,</kbd> + <kbd>.</kbd> to clear highlighted searches
 
-### Why `vim`?
+### :popcorn: Why `vim`?
 Yeah, why the fuck `vim`?
 
 Note: once cloned, to initialize and update the required submodules do:
