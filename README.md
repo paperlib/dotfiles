@@ -26,7 +26,7 @@ Starting with _I don't want to have to memorize yet another set of copy/paste sh
   > so if you do want to be able to use this alternative, you have to disable <code>stty&nbsp;start</code> by adding a <code>stty&nbsp;start&nbsp;undef</code>
   > to your `.bashrc` or `.profile`
 
-Ok so if we want to copy something, we need to select that something.
+Ok so if we want to copy something, we need to be able to select something.
 How about being able to select like you would in any other editor?
 Yes yes, I mean like you know, using shift arrow keys
 * Use <kbd>⇧ Shift</kbd> <kbd>↑</kbd> to start selecting from where you are upwards
