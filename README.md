@@ -5,7 +5,7 @@ User friendly configurations
 ## Vim for developers
 
 You know how with `vim` you're supposed to.. _not to use arrow keys_, _and use <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd>, <kbd>l</kbd> instead_,
-or _not to use windows/mac copy/paste shortcuts_, use <kbd>y</kbd>, <kbd>yy</kbd>, <kbd>p</kbd> and whatnot instead..
+or _not to use windows/mac copy/paste shortcuts_, and use <kbd>y</kbd>, <kbd>yy</kbd>, <kbd>p</kbd> and whatnot instead..
 like guys what the fuck? **Vim is great** and I want to use it like a _normal developer_, **and whatever I can do to minimize
 muscle memory and brain power, I will do, so that I can then use that very memory and brain power somewhere else instead**!
 
