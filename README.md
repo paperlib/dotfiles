@@ -2,11 +2,11 @@
 
 User friendly configurations
 
-## Vim for humans
+## Vim for developers
 
-You know what they say.. _don't use arrow keys_, _use <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd>, <kbd>l</kbd> instead_,
-or _don't use windows/mac copy/paste shortcuts_, use <kbd>y</kbd>, <kbd>yy</kbd>, <kbd>p</kbd> and whatnot instead..
-like guys what the fuck? **Vim is great** and I want to use it like a _normal human_, **and whatever I can do to minimize
+You know how with `vim` you're supposed to.. _not to use arrow keys_, _and use <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd>, <kbd>l</kbd> instead_,
+or _not to use windows/mac copy/paste shortcuts_, use <kbd>y</kbd>, <kbd>yy</kbd>, <kbd>p</kbd> and whatnot instead..
+like guys what the fuck? **Vim is great** and I want to use it like a _normal developer_, **and whatever I can do to minimize
 muscle memory and brain power, I will do, so that I can then use that very memory and brain power somewhere else instead**!
 
 So here we go ...
@@ -24,7 +24,7 @@ Starting with _I don't want to have to memorize yet another set of copy/paste sh
   > Note: even though [Vim's documentation](https://vimhelp.org/gui_w32.txt.html#CTRL-V-alternative) states <kbd>Ctrl</kbd> <kbd>q</kbd>
   > can be used as an alternative to <kbd>Ctrl</kbd> <kbd>v</kbd>, terminals often have <kbd>Ctrl</kbd> <kbd>q</kbd> mapped to <code>stty&nbsp;start</code>,
   > so if you do want to be able to use this alternative, you have to disable <code>stty&nbsp;start</code> by adding a <code>stty&nbsp;start&nbsp;undef</code>
-  > in your `.bashrc` or `.profile`
+  > to your `.bashrc` or `.profile`
 
 Ok so if we want to copy something, we need to select that something.
 How about being able to select like you would in any other editor?
