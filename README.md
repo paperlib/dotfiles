@@ -5,19 +5,19 @@ User friendly configurations
 ## Vim for developers
 
 You know how with `vim` you're supposed to.. _not to use arrow keys_, _and use <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd>, <kbd>l</kbd> instead_,
-or _not to use windows/mac copy/paste shortcuts_, and use <kbd>y</kbd>, <kbd>yy</kbd>, <kbd>p</kbd> and whatnot instead..
+or _not use windows/mac copy/paste shortcuts_, but use <kbd>y</kbd>, <kbd>yy</kbd>, <kbd>p</kbd> and whatnot instead..
 like guys what the fuck? **Vim is great** and I want to use it like a _normal developer_, **and whatever I can do to minimize
 muscle memory and brain power, I will do, so that I can then use that very memory and brain power somewhere else instead**!
 
 So here we go ...
 
-### :heart_on_fire: `.vimrc`: amazing keyboard shortcuts!
-Starting with _I don't want to have to memorize yet another set of copy/paste shortcuts_!<br>
-(great achievement.. I know..., no no..., I mean _really_ [I know...](https://github.com/paperlib/dotfiles/blob/d0989f85ab1a01018b7398a43686eb6c8e8ac8a1/.vimrc#L48))
+### :heart_on_fire: `.vimrc`: gimme normal shortcuts!
+Starting with _I don't want to have to memorize yet another set of copy/paste shortcuts!_<br>
+(great achievement.. I know..., no no..., I mean _really..._ [I know...](https://github.com/paperlib/dotfiles/blob/d0989f85ab1a01018b7398a43686eb6c8e8ac8a1/.vimrc#L48))
 
 * Use <kbd>Ctrl</kbd> <kbd>a</kbd> to select all
-* Use <kbd>Ctrl</kbd> <kbd>c</kbd> to copy selection
-* Use <kbd>Ctrl</kbd> <kbd>x</kbd> to cut selection
+* Use <kbd>Ctrl</kbd> <kbd>c</kbd> to copy the selection
+* Use <kbd>Ctrl</kbd> <kbd>x</kbd> to cut the selection
 * Use <kbd>Ctrl</kbd> <kbd>v</kbd> to paste
 
   > Btw since <kbd>Ctrl</kbd> <kbd>v</kbd> is now used to paste, we use <kbd>Ctrl</kbd> <kbd>q</kbd> to switch to visual block mode.<br>
