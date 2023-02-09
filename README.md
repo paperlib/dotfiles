@@ -49,7 +49,7 @@ if you want to see it in action.)
 
 ### :leaves: a few more shortcuts
 You probably know how to open several files at once in `vim`, something like `vim file.one file.two`, right? But what most don't know - and by
-most I mean even seasoned professionals for whom `vim` is that tool they just _have_ to use -, so... what most don't know is how to flip
+most I mean even seasoned professionals for whom `vim` is that tool they just _have_ to use -, so what most don't know is how to flip
 through those files once in `vim` (_most_ would just quit `:q` the current file so that the next pops-up, or just quit all wholesale!)
 
 So what if... we could flip through open files in `vim` with the simplest of shortcuts?
