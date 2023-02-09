@@ -52,7 +52,7 @@ You probably know how to open several files in `vim` at once, something like `vi
 most I mean even seasoned professionals for whom `vim` is that tool they are just forced to use -, so... what most don't know is how to flip
 through those files once in `vim` (most would just quit `:q` the current file so that the next one pops-up, or just quit all wholesale!)
 
-So what if... we could flip through files open at once in `vim` with the simplest of shortcuts?
+So what if... we could flip through open files in `vim` with the simplest of shortcuts?
 * Use <kbd>⇥ Tab</kbd> to switch to the next open file
 * Use <kbd>⇧ Shift</kbd> <kbd>⇥ Tab</kbd> to switch back to the previous open file
 
