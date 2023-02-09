@@ -104,7 +104,7 @@ let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
 let mapleader = " "
 
-" toggle the file explorer (opens on the curreng working directory.)
+" toggle the file explorer (opens on the current working directory.)
 nnoremap <leader>. :Lexplore<cr>
 " open the file explorer (on the directory of the current file.)
 nnoremap <leader>, :Lexplore %:p:h<cr>
