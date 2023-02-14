@@ -57,7 +57,7 @@ let b:git_branch = ""
 let g:devnull = has('win32') ? 'NUL' : '/dev/null'
 
 function! s:get_branch()
-  let l:git_command  = "cd " . expand("%:p:h") . " && git rev-parse --abbrev-ref HEAD 2> " . g:devnull
+  let l:git_command  = "cd " . expand("%:p:h") . " 2> " . g:devnull . " && git rev-parse --abbrev-ref HEAD 2> " . g:devnull
   let s:branch_name = substitute(system(l:git_command), '\n', '', 'g')
 
   if !empty(s:branch_name)
