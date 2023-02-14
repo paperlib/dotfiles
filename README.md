@@ -19,7 +19,7 @@ Starting with _I don't want to have to memorize yet another set of copy/paste sh
 * Use <kbd>Ctrl</kbd> <kbd>c</kbd> to copy the selection
 * Use <kbd>Ctrl</kbd> <kbd>x</kbd> to cut the selection
 * Use <kbd>Ctrl</kbd> <kbd>v</kbd> to paste
-  > Btw since with this <kbd>Ctrl</kbd> <kbd>v</kbd> is now mapped to paste, we use <kbd>Ctrl</kbd> <kbd>q</kbd> to switch to visual block mode.<br>
+  > Btw since now this <kbd>Ctrl</kbd> <kbd>v</kbd> is mapped to paste, we use <kbd>Ctrl</kbd> <kbd>q</kbd> to switch to visual block mode.<br>
   >
   > Note: even though [Vim's documentation](https://vimhelp.org/gui_w32.txt.html#CTRL-V-alternative) states <kbd>Ctrl</kbd> <kbd>q</kbd>
   > can be used as an alternative to <kbd>Ctrl</kbd> <kbd>v</kbd>, terminals often have <kbd>Ctrl</kbd> <kbd>q</kbd> mapped to <code>stty&nbsp;start</code>,
