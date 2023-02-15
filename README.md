@@ -5,7 +5,7 @@ User friendly configurations
 ## Vim for developers
 
 You know how with `vim` you're supposed to... _not to use arrow keys_, _and use <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd>, <kbd>l</kbd> instead_,
-or _not use windows/mac copy/paste shortcuts_, but use <kbd>y</kbd>, <kbd>yy</kbd>, <kbd>p</kbd> and whatnot instead..
+or _not use windows/mac copy/paste shortcuts_, but use <kbd>y</kbd>, <kbd>y</kbd> <kbd>y</kbd>, <kbd>p</kbd> and whatnot instead...
 like guys what the fuck? **Vim is great** and I want to use it like a _normal developer_, **and whatever I can do to minimize
 muscle memory and brain power, I will do, so that I can then use that very memory and brain power somewhere else instead!**
 
@@ -56,6 +56,16 @@ So what if... we could flip through open files in `vim` with the simplest of sho
 * Use <kbd>⇥ Tab</kbd> to switch over to the next open file
 * Use <kbd>⇧ Shift</kbd> <kbd>⇥ Tab</kbd> to switch back to the previous open file
   > and man... please don't tell me you're using tabs to indent, com'on
+
+Next, let's flip through open windows:
+* Use <kbd>⌃ Control</kbd> <kbd>→</kbd> to move the cursor to the right hand side window
+* Use <kbd>⌃ Control</kbd> <kbd>←</kbd> to move the cursor to the left hand side window
+* Use <kbd>⌃ Control</kbd> <kbd>↑</kbd> to move the cursor to the upper window
+* Use <kbd>⌃ Control</kbd> <kbd>↓</kbd> to move the cursor to the lower window
+  > This is where things get tricky, have a look at [`keyboard.hacks.vim`](hacks/vim/keyboard.hacks.vim) and yes this is where the "I told you so"
+  > <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd>, <kbd>l</kbd> dude comes in... but guys - 23 years in - can we move to 21st century programming?
+  > This coming from a guy who wants to use `vim` in the 21st century... WTF :smile: but yeah this is a good moment to remind you, please
+  > use [`nvim`](https://neovim.io/), everything is sooo much easier there.
 
 Others
 * Use <kbd>,</kbd> + <kbd>.</kbd> to clear highlighted searches
