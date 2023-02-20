@@ -74,7 +74,15 @@ Others:
   [`netrw`](https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/) on the directory of the current file
 * Use <kbd>,</kbd> + <kbd>.</kbd> to clear highlighted searches
 
-And finally, :electric_plug: plugin related shortcuts:
+### :electric_plug: and finally, a few plugin related shortcuts:
+
+* [tpope/vim-commentary](https://github.com/tpope/vim-commentary)
+  - Use <kbd>-</kbd> to comment the current line or selection
+  - Use <kbd>-</kbd> to uncomment the current line or selection<br>
+    > _yes that's the very same key, used to toggle comments_
+* [tpope/vim-surround](https://github.com/tpope/vim-surround) _only active in select `V` mode_
+  - Use <kbd>"</kbd> to surround the current selection with double quotes
+  - Use <kbd>'</kbd> to surround the current selection with single quotes
 
 ### :popcorn: Why `vim`?
 Yeah, why the fuck `vim`?
