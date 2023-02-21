@@ -83,12 +83,17 @@ Others:
 * [tpope/vim-surround](https://github.com/tpope/vim-surround) _only active in select `V` mode_
   - Use <kbd>"</kbd> to surround the current selection with double quotes
   - Use <kbd>'</kbd> to surround the current selection with single quotes
+  - Use <kbd>[</kbd> to surround the current selection between carrets
+  - Use <kbd>{</kbd> to surround the current selection between curly braces
+  - Use <kbd>(</kbd> to surround the current selection between parenthesis
+  - Use <kbd>]</kbd> to surround the current selection between carrets _without adding a space_
+  - Use <kbd>}</kbd> to surround the current selection between curly braces _without adding a space_
+  - Use <kbd>)</kbd> to surround the current selection between parenthesis _without adding a space_
+
+**Note**: once cloned, to initialize and update the required plugins (git submodules) do:
+```
+git submodule init; git submodule update
+```
 
 ### :popcorn: Why `vim`?
 Yeah, why the fuck `vim`?
-
-Note: once cloned, to initialize and update the required submodules do:
-```
-git submodule init
-git submodule update
-```
