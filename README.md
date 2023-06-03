@@ -64,7 +64,7 @@ Next, let's flip through open windows:
 * Use <kbd>⌃ Control</kbd> <kbd>↑</kbd> to move the cursor to the upper window
 * Use <kbd>⌃ Control</kbd> <kbd>↓</kbd> to move the cursor to the lower window
   > This is where things get tricky, have a look at [`keyboard.hacks.vim`](hacks/vim/keyboard.hacks.vim) and yes this is where the "I told you so"
-  > <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd>, <kbd>l</kbd> dude comes in... but guys - 23 years in - can we move to 21st century programming?
+  > <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd>, <kbd>l</kbd> dude comes in... but guys - 23 years in - can we move to 21st century keyboards?
   > I know this coming from a guy who wants to use `vim` in the 21st century... WTF :smile: but yeah this is a good moment to remind you,
   > please use [`nvim`](https://neovim.io/), everything is sooo much easier there.
 
