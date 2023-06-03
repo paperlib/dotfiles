@@ -128,5 +128,20 @@ nnoremap <expr> <s-tab> &filetype != 'netrw' ? ':bp<cr>' : ''
 " somehow this reacts faster than hitting <esc> directly.
 vnoremap <leader><leader> <esc>
 
+" -- cursor.
+if has("autocmd")
+  augroup restoreCursor
+  au!
+
+  " restore last cursor position
+  " https://opensource.apple.com/source/vim/vim-47/runtime/vimrc_example.vim.auto.html
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+
+  augroup END
+endif
+
 " load personal, regional or machine specific hacks.
 silent! source ~/.dotfiles/hacks/vim/keyboard.hacks.vim
