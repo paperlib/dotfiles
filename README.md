@@ -97,11 +97,12 @@ Others:
 ### :herb: Other _standard and very useful_ shortcuts:
 * Use <kbd>z</kbd> <kbd>z</kbd> to [center the current line on the screen](https://vi.stackexchange.com/questions/40/how-do-i-center-the-current-line-in-the-screen)<br>Equivalently use <kbd>z</kbd> <kbd>t</kbd> to align the current line to the <b>t</b>op of your terminal, or <kbd>z</kbd> <kbd>b</kbd> for the <b>b</b>ottom
 * Use <kbd>⇧ Shift</kbd> <kbd>g</kbd> to go to the end of your file<br>Equivalently use <kbd>g</kbd> <kbd>g</kbd> to do the oposite, ie. go to the top<br>(or if you want more granularity use <kbd>%</kbd>, ie. use <kbd>7</kbd> <kbd>5</kbd> <kbd>%</kbd> go to 75% down the file)
+* Use <kbd>v</kbd> <kbd>i</kbd> <kbd>"</kbd> to select everything between double quotes<br>Equivalently replace <kbd>"</kbd> with <kbd>'</kbd> or <kbd>(</kbd> to select everything between quotes or parenthesis<br>(again courtesy of [this Primeagen short](https://www.youtube.com/shorts/uxMfvWPUThE) here)
 
-> above all, please remember [Vim is a language](https://danielmiessler.com/study/vim/#language) :point_left:<br>
-> once you understand that, remembering any shortcuts will be so much easier
->
-> or as someone eloquently quiped on stackoverflow [Your problem with Vim is that you don't grok vi.](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118)
+> above all, please remember: <b>[Vim is a language](https://danielmiessler.com/study/vim/#language)</b> :point_left:<br>
+> once you understand that, remembering any shortcuts will be so much easier<br>
+> or as someone eloquently quiped on stackoverflow <b>[Your problem with Vim is that you don't grok vi.](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118)</b><br>
+> (yes yes there is a logic to the whole madness :smiling_face_with_three_hearts: I promess)
 
 ### :popcorn: Why `vim`?
 Yeah, why the fuck `vim`?
