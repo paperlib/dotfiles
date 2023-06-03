@@ -91,10 +91,17 @@ Others:
   - Use <kbd>}</kbd> to surround the current selection between curly braces _without adding a space_
   - Use <kbd>)</kbd> to surround the current selection between parenthesis _without adding a space_
 
-**Note**: once cloned, to initialize and update the required plugins (git submodules) do:
-```
-git submodule init; git submodule update
-```
+**Note**: once cloned you have cloned this repo, to initialize and update the above plugins (git submodules) do:<br>
+`git submodule init; git submodule update`
+
+### :herb: Other _standard and very useful_ shortcuts:
+* Use <kbd>z</kbd> <kbd>z</kbd> to [center the current line on the screen](https://vi.stackexchange.com/questions/40/how-do-i-center-the-current-line-in-the-screen)<br>Equivalently use <kbd>z</kbd> <kbd>t</kbd> to align the current line to the <b>t</b>op of your terminal, or <kbd>z</kbd> <kbd>b</kbd> for the <b>b</b>ottom
+* Use <kbd>⇧ Shift</kbd> <kbd>g</kbd> to go to the end of your file<br>Equivalently use <kbd>g</kbd> <kbd>g</kbd> to do the oposite, ie. go to the top<br>(or if you want more granularity use <kbd>%</kbd>, ie. use <kbd>7</kbd> <kbd>5</kbd> <kbd>%</kbd> go to 75% down the file)
+
+> above all, please remember [Vim is a language](https://danielmiessler.com/study/vim/#language) :point_left:<br>
+> once you understand that, remembering any shortcuts will be so much easier
+>
+> or as someone eloquently quiped on stackoverflow [Your problem with Vim is that you don't grok vi.](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118)
 
 ### :popcorn: Why `vim`?
 Yeah, why the fuck `vim`?
