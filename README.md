@@ -55,8 +55,9 @@ through those files once in `vim` (_most_ would just quit `:q` the current file 
 
 So what if... we could flip through open files in `vim` with the simplest of shortcuts?
 * Use <kbd>⇥ Tab</kbd> to switch over to the next open file
-* Use <kbd>⇧ Shift</kbd> <kbd>⇥ Tab</kbd> to switch back to the previous open file
-  > and man... please don't tell me you're using tabs to indent, com'on
+* Use <kbd>⇧ Shift</kbd> <kbd>⇥ Tab</kbd> to switch back to the previous open file<br>
+  Alternatively you can also use <kbd>⌃ Control</kbd> <kbd>⇥ Tab</kbd> just like you do to flip through your Google Chrome tabs!
+  > and man... please don't tell me you're using tabs to indent, com'on<br>
 
 Next, let's flip through open windows:
 * Use <kbd>⌃ Control</kbd> <kbd>→</kbd> to move the cursor to the right hand side window
