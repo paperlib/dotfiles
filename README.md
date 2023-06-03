@@ -4,15 +4,15 @@ User friendly configurations
 
 ## Vim for developers
 
-You know how with `vim` you're supposed to... _not to use arrow keys_, _and use <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd>, <kbd>l</kbd> instead_,
-or _not use windows/mac copy/paste shortcuts_, but use <kbd>y</kbd>, <kbd>y</kbd> <kbd>y</kbd>, <kbd>p</kbd> and whatnot instead...
-like guys what the fuck? **Vim is great** and I want to use it like a _normal developer_, **and whatever I can do to minimize
+You know how with `vim` you're supposed to... _not use arrow keys_, _and use <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd>, <kbd>l</kbd> instead_,
+or _not use windows/mac copy/paste shortcuts_, but use <kbd>y</kbd>, <kbd>y</kbd> <kbd>y</kbd>, <kbd>p</kbd> and whatnot instead, sure...
+but guys, what the fuck? **Vim is great** and I want to use it like a _normal developer_, **and whatever I can do to minimize
 muscle memory and brain power, I will do, so that I can then use that very memory and brain power somewhere else instead!**
 
 So here we go...
 
 ### :heart: [`.vimrc`](.vimrc): gimme normal shortcuts!
-Starting with _I don't want to have to memorize yet another set of copy/paste shortcuts!_<br>
+Let's start with _I don't want to memorize yet another set of copy/paste shortcuts!_<br>
 (great achievement.. I know..., no no..., I mean _really..._ [I know...](https://github.com/paperlib/dotfiles/blob/d0989f85ab1a01018b7398a43686eb6c8e8ac8a1/.vimrc#L48))
 
 * Use <kbd>Ctrl</kbd> <kbd>a</kbd> to select all
@@ -29,6 +29,7 @@ Starting with _I don't want to have to memorize yet another set of copy/paste sh
 If we want to be able to copy something, we need to be able to select something.
 How about being able to select like you would in any other editor?
 Yes yes, I mean like you know, using shift arrow keys
+(again this is pure _anathema_ I know...)
 * Use <kbd>⇧ Shift</kbd> <kbd>↑</kbd> to start selecting from where you are upwards
 * Use <kbd>⇧ Shift</kbd> <kbd>→</kbd> to start selecting from where you are leftwards
 * Use <kbd>⇧ Shift</kbd> <kbd>↓</kbd> to start selecting from where you are downwards
