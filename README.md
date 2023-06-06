@@ -55,8 +55,9 @@ through those files once in `vim` (_most_ would just quit `:q` the current file 
 
 So what if... we could flip through open files in `vim` with the simplest of shortcuts?
 * Use <kbd>⇥ Tab</kbd> to switch over to the next open file
-* Use <kbd>⇧ Shift</kbd> <kbd>⇥ Tab</kbd> to switch back to the previous open file
-  > and man... please don't tell me you're using tabs to indent, com'on
+* Use <kbd>⇧ Shift</kbd> <kbd>⇥ Tab</kbd> to switch back to the previous open file<br>
+  Alternatively you can also use <kbd>⌃ Control</kbd> <kbd>⇥ Tab</kbd> just like you do to flip through your Google Chrome tabs!
+  > and man... please don't tell me you're using tabs to indent, com'on<br>
 
 Next, let's flip through open windows:
 * Use <kbd>⌃ Control</kbd> <kbd>→</kbd> to move the cursor to the right hand side window
@@ -64,7 +65,7 @@ Next, let's flip through open windows:
 * Use <kbd>⌃ Control</kbd> <kbd>↑</kbd> to move the cursor to the upper window
 * Use <kbd>⌃ Control</kbd> <kbd>↓</kbd> to move the cursor to the lower window
   > This is where things get tricky, have a look at [`keyboard.hacks.vim`](hacks/vim/keyboard.hacks.vim) and yes this is where the "I told you so"
-  > <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd>, <kbd>l</kbd> dude comes in... but guys - 23 years in - can we move to 21st century programming?
+  > <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd>, <kbd>l</kbd> dude comes in... but guys - 23 years in - can we move to 21st century keyboards?
   > I know this coming from a guy who wants to use `vim` in the 21st century... WTF :smile: but yeah this is a good moment to remind you,
   > please use [`nvim`](https://neovim.io/), everything is sooo much easier there.
 
@@ -91,10 +92,18 @@ Others:
   - Use <kbd>}</kbd> to surround the current selection between curly braces _without adding a space_
   - Use <kbd>)</kbd> to surround the current selection between parenthesis _without adding a space_
 
-**Note**: once cloned, to initialize and update the required plugins (git submodules) do:
-```
-git submodule init; git submodule update
-```
+**Note**: once cloned you have cloned this repo, to initialize and update the above plugins (git submodules) do:<br>
+`git submodule init; git submodule update`
+
+### :herb: Other _standard and very useful_ shortcuts:
+* Use <kbd>z</kbd> <kbd>z</kbd> to [center the current line on the screen](https://vi.stackexchange.com/questions/40/how-do-i-center-the-current-line-in-the-screen)<br>Equivalently use <kbd>z</kbd> <kbd>t</kbd> to align the current line to the <b>t</b>op of your terminal, or <kbd>z</kbd> <kbd>b</kbd> for the <b>b</b>ottom
+* Use <kbd>⇧ Shift</kbd> <kbd>g</kbd> to go to the end of your file<br>Equivalently use <kbd>g</kbd> <kbd>g</kbd> to do the oposite, ie. go to the top<br>(or if you want more granularity use <kbd>%</kbd>, ie. use <kbd>7</kbd> <kbd>5</kbd> <kbd>%</kbd> go to 75% down the file)
+* Use <kbd>v</kbd> <kbd>i</kbd> <kbd>"</kbd> to select everything between double quotes<br>Equivalently replace <kbd>"</kbd> with <kbd>'</kbd> or <kbd>(</kbd> to select everything between quotes or parenthesis<br>(again courtesy of [this Primeagen short](https://www.youtube.com/shorts/uxMfvWPUThE) here)
+
+> above all, please remember: <b>[Vim is a language](https://danielmiessler.com/study/vim/#language)</b> :point_left:<br>
+> once you understand that, remembering any shortcuts will be so much easier<br>
+> or as someone eloquently quiped on stackoverflow <b>[Your problem with Vim is that you don't grok vi.](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118)</b><br>
+> (yes yes there is a logic to the whole madness :smiling_face_with_three_hearts: I promess)
 
 ### :popcorn: Why `vim`?
 Yeah, why the fuck `vim`?
