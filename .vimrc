@@ -63,8 +63,9 @@ inoremap <c-v> <esc>p
 " and ... g'damn paste in command mode!!!!!
 cnoremap <c-v> <c-r>+
 
-set pastetoggle=<f5>
-map <silent> <f9> :let b:filemetaline=!get(b:, 'filemetaline', 0)<cr>
+set pastetoggle=<f5> " in neovim >0.9 pastetoggle has been deprecated
+" note: that ':let &stl=&stl' is a hack for Neovim (statusline refresh issue.)
+map <silent> <f9> :let b:filemetaline=!get(b:, 'filemetaline', 0)<cr>:let &stl=&stl<cr>
 
 " select using arrow keys!
 nnoremap <s-up> v<up>
