@@ -64,8 +64,8 @@ inoremap <c-v> <esc>p
 cnoremap <c-v> <c-r>+
 
 set pastetoggle=<f5> " in neovim >0.9 pastetoggle has been deprecated
-" note: that ':let &stl=&stl' is a hack for Neovim (statusline refresh issue.)
-map <silent> <f9> :let b:filemetaline=!get(b:, 'filemetaline', 0)<cr>:let &stl=&stl<cr>
+" do note the :redrawstatus here: force redraw to immediatly update the status line
+map <silent> <f9> :let b:filemetaline=!get(b:, 'filemetaline', 0)<cr>:redrawstatus<cr>
 
 " select using arrow keys!
 nnoremap <s-up> v<up>
