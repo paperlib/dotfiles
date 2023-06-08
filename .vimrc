@@ -56,8 +56,6 @@ nnoremap d "_d
 nnoremap D "_D
 vnoremap d "_d
 " and now setup the normal paste shortcuts.
-" note: no ctrl-x because... why would you
-" want ctrl-x when you can just do x ;-)
 nnoremap <c-v> p
 inoremap <c-v> <esc>p
 " and ... g'damn paste in command mode!!!!!
