@@ -101,6 +101,7 @@ Others:
 * Use <kbd>v</kbd> <kbd>i</kbd> <kbd>"</kbd> to select everything between double quotes<br>Equivalently replace <kbd>"</kbd> with <kbd>'</kbd> or <kbd>(</kbd> to select everything between quotes or parenthesis<br>(again courtesy of [this Primeagen short](https://www.youtube.com/shorts/uxMfvWPUThE) here)
 * Use <kbd>v</kbd> <kbd>a</kbd> <kbd>"</kbd> to select everything between double quotes, including the double quotes<br>
 (ie. it's the same as above but with the _surroundings_ included)
+* If you press <kbd>:</kbd> to enter command mode while you have a visual selection the Vim will automatically insert `<',>'` as a range indicating the selection. You can use that to do things like search replace within the selection (learnt from [this reddit comment](https://www.reddit.com/r/vim/comments/165ot5/comment/c7syqmb/)).
 
 > above all, please remember: <b>[Vim is a language](https://danielmiessler.com/study/vim/#language)</b> :point_left:<br>
 > once you understand that, remembering any shortcuts will be so much easier<br>
