@@ -56,6 +56,12 @@ nnoremap d "_d
 nnoremap D "_D
 vnoremap d "_d
 " and now setup the normal paste shortcuts.
+" notes on remapping ctrl-v:
+" https://github.com/paperlib/dotfiles#heart-vimrc-gimme-normal-shortcuts
+" -- see also additional information here:
+" https://vimhelp.org/gui_w32.txt.html#CTRL-V-alternative
+" https://searene.github.io/2015/12/25/map-Ctrl-V-as-Ctrl-Q-in-vim
+" https://stackoverflow.com/questions/426896/vim-ctrl-v-conflict-with-windows-paste
 nnoremap <c-v> p
 inoremap <c-v> <esc>p
 " and ... g'damn paste in command mode!!!!!
