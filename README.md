@@ -97,7 +97,9 @@ Others:
 
 ### :herb: Other _standard and very useful_ shortcuts:
 * Use <kbd>z</kbd> <kbd>z</kbd> to [center the current line on the screen](https://vi.stackexchange.com/questions/40/how-do-i-center-the-current-line-in-the-screen)<br>Equivalently use <kbd>z</kbd> <kbd>t</kbd> to align the current line to the <b>t</b>op of your terminal, or <kbd>z</kbd> <kbd>b</kbd> for the <b>b</b>ottom
-* Use <kbd>⇧ Shift</kbd> <kbd>g</kbd> to go to the end of your file<br>Equivalently use <kbd>g</kbd> <kbd>g</kbd> to do the oposite, ie. go to the top<br>(or if you want more granularity use <kbd>%</kbd>, ie. use <kbd>7</kbd> <kbd>5</kbd> <kbd>%</kbd> go to 75% down the file)
+* Use <kbd>⇧ Shift</kbd> <kbd>g</kbd> to go to the end of your file<br>Equivalently use <kbd>g</kbd> <kbd>g</kbd> to do the oposite, ie. go to the top<br>
+If you want more granularity use <kbd>%</kbd>, ie. use <kbd>7</kbd> <kbd>5</kbd> <kbd>%</kbd> go to 75% down the file<br>
+(see this stackoverflow question for more details: [Moving to middle of huge file in Vim or gVim](https://stackoverflow.com/questions/35142244/moving-to-middle-of-huge-file-in-vim-or-gvim))
 * Use <kbd>v</kbd> <kbd>i</kbd> <kbd>"</kbd> to select everything between double quotes<br>Equivalently replace <kbd>"</kbd> with <kbd>'</kbd> or <kbd>(</kbd> to select everything between quotes or parenthesis<br>(again courtesy of [this Primeagen short](https://www.youtube.com/shorts/uxMfvWPUThE) here)
 * Use <kbd>v</kbd> <kbd>a</kbd> <kbd>"</kbd> to select everything between double quotes, including the double quotes<br>
 (ie. it's the same as above but with the _surroundings_ included)
