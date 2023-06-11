@@ -83,14 +83,9 @@ Others:
   - Use <kbd>-</kbd> to uncomment the current line or selection<br>
     > _yes that's the very same key, used to toggle comments_
 * [tpope/vim-surround](https://github.com/tpope/vim-surround) _only active in select `V` mode_
-  - Use <kbd>"</kbd> to surround the current selection with double quotes
-  - Use <kbd>'</kbd> to surround the current selection with single quotes
-  - Use <kbd>[</kbd> to surround the current selection between carrets
-  - Use <kbd>{</kbd> to surround the current selection between curly braces
-  - Use <kbd>(</kbd> to surround the current selection between parenthesis
-  - Use <kbd>]</kbd> to surround the current selection between carrets _without adding a space_
-  - Use <kbd>}</kbd> to surround the current selection between curly braces _without adding a space_
-  - Use <kbd>)</kbd> to surround the current selection between parenthesis _without adding a space_
+  - Use <kbd>"</kbd> or <kbd>'</kbd> to surround the current selection with double quotes or single quotes
+  - Use <kbd>[</kbd>, <kbd>{</kbd> or <kbd>(</kbd> to surround the current selection between carrets, curly braces or parenthesis
+  - Use <kbd>]</kbd>, <kbd>}</kbd> or <kbd>)</kbd> to surround the current selection between carrets, curly braces or parenthesis _without adding a space_
 
 **Note**: once cloned you have cloned this repo, to initialize and update the above plugins (git submodules) do:<br>
 `git submodule init; git submodule update`
