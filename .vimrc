@@ -116,8 +116,8 @@ nnoremap <leader>, :Lexplore %:p:h<cr>
 
 " windows!
 " switch horizontal & vertical splits
-nnoremap <leader>h :windo wincmd H<cr>
-nnoremap <leader>k :windo wincmd K<cr>
+nnoremap <leader>v :windo wincmd H<cr>
+nnoremap <leader>h :windo wincmd K<cr>
 
 " switch between windows using ctrl-arrows!
 map <c-up> <c-w>k
