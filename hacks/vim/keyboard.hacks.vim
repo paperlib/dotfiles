@@ -20,6 +20,15 @@ if has('nvim')
   vmap ] sa]
   vmap } sa}
   vmap ) sa)
+
+  nmap " srb"
+  nmap ' srb'
+  nmap [ srb[
+  nmap { srb{
+  nmap ( srb(
+  nmap ] srb]
+  nmap } srb}
+  nmap ) srb)
 else
   " otherwise we fallabck to vim-surround
   " https://github.com/tpope/vim-surround
