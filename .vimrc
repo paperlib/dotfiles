@@ -153,5 +153,5 @@ silent! source ~/.dotfiles/hacks/vim/keyboard.hacks.vim
 
 " finally - let's get real ---------------------------.
 if has('nvim')  " -- let's setup a real IDE/PDE for VI.
-  source ~/.dotfiles/hacks/neovim/bootstrap.lua
+  silent source ~/.dotfiles/hacks/neovim/bootstrap.lua
 endif  " -- yep this is neovim! ----------------------.

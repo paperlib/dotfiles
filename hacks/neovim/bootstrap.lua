@@ -17,4 +17,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-" https://github.com/crivotz/nv-ide/blob/master/lua/config/plugins/sandwich.lua
+require("lazy").setup({
+  "machakann/vim-sandwich",
+  "tpope/vim-commentary"
+})
