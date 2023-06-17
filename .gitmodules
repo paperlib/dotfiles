@@ -1,6 +1,3 @@
 [submodule ".vim/pack/tpope/start/vim-commentary"]
 	path = .vim/pack/tpope/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary
-[submodule ".vim/pack/tpope/start/vim-surround"]
-	path = .vim/pack/tpope/start/vim-surround
-	url = https://github.com/tpope/vim-surround
