@@ -9,38 +9,24 @@ nmap - <Plug>CommentaryLine
 vmap - <Plug>Commentary
 
 " surrounding text between quotes, double quotes etc.
-if has('nvim')
-  " if we use neovim we will handle these with vim-sandwich
-  " https://github.com/machakann/vim-sandwich
-  vmap " sa"
-  vmap ' sa'
-  vmap [ sa[
-  vmap { sa{
-  vmap ( sa(
-  vmap ] sa]
-  vmap } sa}
-  vmap ) sa)
+" https://github.com/machakann/vim-sandwich
+vmap " sa"
+vmap ' sa'
+vmap [ sa[
+vmap { sa{
+vmap ( sa(
+vmap ] sa]
+vmap } sa}
+vmap ) sa)
 
-  nmap " srb"
-  nmap ' srb'
-  nmap [ srb[
-  nmap { srb{
-  nmap ( srb(
-  nmap ] srb]
-  nmap } srb}
-  nmap ) srb)
-else
-  " otherwise we fallabck to vim-surround
-  " https://github.com/tpope/vim-surround
-  vmap " S"
-  vmap ' S'
-  vmap [ S[
-  vmap { S{
-  vmap ( S(
-  vmap ] S]
-  vmap } S}
-  vmap ) S)
-endif
+nmap " srb"
+nmap ' srb'
+nmap [ srb[
+nmap { srb{
+nmap ( srb(
+nmap ] srb]
+nmap } srb}
+nmap ) srb)
 
 " arrow keys - hack for putty!!!
 " TODO: document what the fuck!!
