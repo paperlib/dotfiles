@@ -8,7 +8,7 @@
 nmap - <Plug>CommentaryLine
 vmap - <Plug>Commentary
 
-" https://github.com/tpope/vim-commentary
+" https://github.com/tpope/vim-fugitive
 nmap <leader>gd :Gvdiffsplit<cr>
 
 " surrounding text between quotes, double quotes etc.
