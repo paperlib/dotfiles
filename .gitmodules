@@ -1,6 +1,6 @@
 [submodule ".vim/pack/tpope/start/vim-commentary"]
 	path = .vim/pack/tpope/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary
-[submodule ".vim/pack/tpope/start/vim-sandwich"]
-	path = .vim/pack/tpope/start/vim-sandwich
+[submodule ".vim/pack/machakann/start/vim-sandwich"]
+	path = .vim/pack/machakann/start/vim-sandwich
 	url = https://github.com/machakann/vim-sandwich
