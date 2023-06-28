@@ -19,14 +19,16 @@ vmap ] sa]
 vmap } sa}
 vmap ) sa)
 
-nmap " srb"
-nmap ' srb'
-nmap [ srb[
-nmap { srb{
-nmap ( srb(
-nmap ] srb]
-nmap } srb}
-nmap ) srb)
+" -- remapping these has too many issues (specially ")a
+" -- -> rethink how to do this!
+" nmap " srb"
+" nmap ' srb'
+" nmap [ srb[
+" nmap { srb{
+" nmap ( srb(
+" nmap ] srb]
+" nmap } srb}
+" nmap ) srb)
 
 " arrow keys - hack for putty!!!
 " TODO: document what the fuck!!
