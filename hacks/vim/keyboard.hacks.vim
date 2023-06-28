@@ -8,6 +8,9 @@
 nmap - <Plug>CommentaryLine
 vmap - <Plug>Commentary
 
+" https://github.com/tpope/vim-commentary
+nmap <leader>gd :Gvdiffsplit<cr>
+
 " surrounding text between quotes, double quotes etc.
 " https://github.com/machakann/vim-sandwich
 vmap " sa"

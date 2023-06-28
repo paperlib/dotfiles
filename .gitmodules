@@ -4,3 +4,6 @@
 [submodule ".vim/pack/machakann/start/vim-sandwich"]
 	path = .vim/pack/machakann/start/vim-sandwich
 	url = https://github.com/machakann/vim-sandwich
+[submodule ".vim/pack/tpope/start/vim-fugitive"]
+	path = .vim/pack/tpope/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive

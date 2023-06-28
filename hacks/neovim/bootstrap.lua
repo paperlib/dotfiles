@@ -19,5 +19,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   "machakann/vim-sandwich",
-  "tpope/vim-commentary"
+  "tpope/vim-commentary",
+  "tpope/vim-fugitive"
 })
