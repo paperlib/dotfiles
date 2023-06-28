@@ -68,7 +68,8 @@ function! s:get_branch()
 endfunction
 
 function! GitBranch()
-  return b:git_branch
+  let git_branch = get(b:, 'git_branch', "")
+  return git_branch
 endfunction
 
 :autocmd BufCreate * call s:get_branch()
