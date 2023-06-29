@@ -83,7 +83,7 @@ Others:
   - Use <kbd>-</kbd> to uncomment the current line or selection<br>
     > _yes that's the very same key, used to toggle comments_
 * [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
-  - Use <kbd>Space</kbd> + <kbd>g</kbd> <kbd>g</kbd> to `git diff` the current file
+  - Use <kbd>Space</kbd> + <kbd>g</kbd> + <kbd>g</kbd> to `git diff` the current file
 * [machakann/vim-sandwich](https://github.com/machakann/vim-sandwich) _only active in select `V` mode_
   - Use <kbd>"</kbd> or <kbd>'</kbd> to surround the current selection with double quotes or single quotes
   - Use <kbd>[</kbd>, <kbd>{</kbd> or <kbd>(</kbd> to surround the current selection between carrets, curly braces or parenthesis
