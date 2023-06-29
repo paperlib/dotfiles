@@ -9,7 +9,7 @@ nmap - <Plug>CommentaryLine
 vmap - <Plug>Commentary
 
 " https://github.com/tpope/vim-fugitive
-nmap <leader>gd :Gvdiffsplit<cr>
+nmap <leader>gg :Gvdiffsplit<cr>
 
 " surrounding text between quotes, double quotes etc.
 " https://github.com/machakann/vim-sandwich
