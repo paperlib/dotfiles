@@ -82,7 +82,7 @@ Others:
   - Use <kbd>-</kbd> to comment the current line or selection
   - Use <kbd>-</kbd> to uncomment the current line or selection<br>
     > _yes that's the very same key, used to toggle comments_
-* [tpope/vim-surround](https://github.com/tpope/vim-surround) _only active in select `V` mode_
+* [machakann/vim-sandwich](https://github.com/machakann/vim-sandwich) _only active in select `V` mode_
   - Use <kbd>"</kbd> or <kbd>'</kbd> to surround the current selection with double quotes or single quotes
   - Use <kbd>[</kbd>, <kbd>{</kbd> or <kbd>(</kbd> to surround the current selection between carrets, curly braces or parenthesis
   - Use <kbd>]</kbd>, <kbd>}</kbd> or <kbd>)</kbd> to surround the current selection between carrets, curly braces or parenthesis _without adding a space_
