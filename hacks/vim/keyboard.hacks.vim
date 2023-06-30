@@ -22,7 +22,7 @@ vmap ] sa]
 vmap } sa}
 vmap ) sa)
 
-" -- remapping these has too many issues (specially ")a
+" -- remapping these has too many issues (specially ")
 " -- -> rethink how to do this!
 " nmap " srb"
 " nmap ' srb'
