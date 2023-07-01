@@ -18,6 +18,7 @@ nmap <leader>gg :Gvdiffsplit<cr>
 " enclosing with brackets, that is: add inside spaces on opening brackets
 " > this needs to happen *after* sandiwch has loaded.. hence "VimEnter" <
 " see: https://github.com/machakann/vim-sandwich/wiki/Bracket-with-spaces
+" and: https://stackoverflow.com/questions/6821033/vim-how-to-run-a-command-immediately-when-starting-vim
 autocmd VimEnter *
   \  let g:sandwich#recipes = deepcopy(g:sandwich#default_recipes) |
   \  let g:sandwich#recipes += [
