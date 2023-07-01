@@ -13,6 +13,19 @@ nmap <leader>gg :Gvdiffsplit<cr>
 
 " surrounding text between quotes, double quotes etc.
 " https://github.com/machakann/vim-sandwich
+"
+" we want vim sandwich to have the same behaviour as vim surround when
+" enclosing with brackets, that is: add inside spaces on opening brackets
+" > this needs to happen *after* sandiwch has loaded.. hence "VimEnter" <
+" see: https://github.com/machakann/vim-sandwich/wiki/Bracket-with-spaces
+autocmd VimEnter *
+  \  let g:sandwich#recipes = deepcopy(g:sandwich#default_recipes) |
+  \  let g:sandwich#recipes += [
+  \        {'buns': ['{ ', ' }'], 'nesting': 1, 'match_syntax': 1, 'kind': ['add', 'replace'], 'action': ['add'], 'input': ['{']},
+  \        {'buns': ['[ ', ' ]'], 'nesting': 1, 'match_syntax': 1, 'kind': ['add', 'replace'], 'action': ['add'], 'input': ['[']},
+  \        {'buns': ['( ', ' )'], 'nesting': 1, 'match_syntax': 1, 'kind': ['add', 'replace'], 'action': ['add'], 'input': ['(']}
+  \      ]
+
 vmap " sa"
 vmap ' sa'
 vmap [ sa[
