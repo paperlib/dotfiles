@@ -89,7 +89,7 @@ Others:
   - Use <kbd>[</kbd>, <kbd>{</kbd> or <kbd>(</kbd> to surround the current selection between carrets, curly braces or parenthesis
   - Use <kbd>]</kbd>, <kbd>}</kbd> or <kbd>)</kbd> to surround the current selection between carrets, curly braces or parenthesis _without adding a space_
 
-**Note**: once cloned you have cloned this repo, to initialize and update the above plugins (git submodules) do:<br>
+**Note**: once you have cloned this repo, to initialize and update the above plugins (git submodules) do:<br>
 `git submodule init; git submodule update`
 
 ### :herb: Other _standard and very useful_ shortcuts:
