@@ -51,7 +51,7 @@ if you want to see it in action.)
 ### :leaves: a few more shortcuts
 You probably know how to open several files in `vim` at once, something like `vim file.one file.two`, right? But what most don't know - and by
 most I mean even seasoned professionals for whom `vim` is that horrible editor they just _have_ to use -, so what most don't know is how to flip
-through those files once in `vim` (_most_ would just quit `:q` the current file so that the next one pops-up, or just quit all wholesale!)
+through those files once in `vim` (_most_ would just quit `:q` the current file so that the next one pops up, or just quit all wholesale!)
 
 So what if... we could flip through open files in `vim` with the simplest of shortcuts?
 * Use <kbd>⇥ Tab</kbd> to switch over to the next open file
@@ -94,18 +94,18 @@ Others:
 
 ### :herb: Other _standard and very useful_ shortcuts:
 * Use <kbd>z</kbd> <kbd>z</kbd> to [center the current line on the screen](https://vi.stackexchange.com/questions/40/how-do-i-center-the-current-line-in-the-screen)<br>Equivalently use <kbd>z</kbd> <kbd>t</kbd> to align the current line to the <b>t</b>op of your terminal, or <kbd>z</kbd> <kbd>b</kbd> for the <b>b</b>ottom
-* Use <kbd>⇧ Shift</kbd> <kbd>g</kbd> to go to the end of your file<br>Equivalently use <kbd>g</kbd> <kbd>g</kbd> to do the oposite, ie. go to the top<br>
+* Use <kbd>⇧ Shift</kbd> <kbd>g</kbd> to go to the end of your file<br>Equivalently use <kbd>g</kbd> <kbd>g</kbd> to do the opposite, ie. go to the top<br>
 If you want more granularity use <kbd>%</kbd>, ie. use <kbd>7</kbd> <kbd>5</kbd> <kbd>%</kbd> go to 75% down the file<br>
 (see this stackoverflow question for more details: [Moving to middle of huge file in Vim or gVim](https://stackoverflow.com/questions/35142244/moving-to-middle-of-huge-file-in-vim-or-gvim))
 * Use <kbd>v</kbd> <kbd>i</kbd> <kbd>"</kbd> to select everything between double quotes<br>Equivalently replace <kbd>"</kbd> with <kbd>'</kbd> or <kbd>(</kbd> to select everything between quotes or parenthesis<br>(again courtesy of [this Primeagen short](https://www.youtube.com/shorts/uxMfvWPUThE) here)
 * Use <kbd>v</kbd> <kbd>a</kbd> <kbd>"</kbd> to select everything between double quotes, including the double quotes<br>
 (ie. it's the same as above but with the _surroundings_ included)
-* If you press <kbd>:</kbd> to enter command mode while you have a visual selection the Vim will automatically insert `<',>'` as a range indicating the selection. You can use that to do things like search replace within the selection (learnt from [this reddit comment](https://www.reddit.com/r/vim/comments/165ot5/comment/c7syqmb/)).
+* If you press <kbd>:</kbd> to enter command mode while you have a visual selection then Vim will automatically insert `<',>'` as a range indicating the selection. You can use that to do things like search&replace within the selection (learnt from [this reddit comment](https://www.reddit.com/r/vim/comments/165ot5/comment/c7syqmb/)).
 
 > above all, please remember: <b>[Vim is a language](https://danielmiessler.com/study/vim/#language)</b> :point_left:<br>
 > once you understand that, remembering any shortcuts will be so much easier<br>
-> or as someone eloquently quiped on stackoverflow <b>[Your problem with Vim is that you don't grok vi.](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118)</b><br>
-> (yes yes there is a logic to the whole madness :smiling_face_with_three_hearts: I promess)
+> or as someone eloquently quipped on stackoverflow <b>[Your problem with Vim is that you don't grok vi.](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118)</b><br>
+> (yes yes there is a logic to the whole madness :smiling_face_with_three_hearts: I promise)
 
 ### :popcorn: Why `vim`?
 Yeah, why the fuck `vim`?
