@@ -23,6 +23,10 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" yes even python should abide to my indenting preferences
+" https://stackoverflow.com/questions/64676540/vim-doesnt-respect-vimrc-indentation-settings
+let g:python_recommended_style = 0
+
 " allow backspace to indent back the shift width.
 set smarttab " ---------------------------------.
 set backspace=indent,eol,start " ---------------.
