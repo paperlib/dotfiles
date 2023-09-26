@@ -23,6 +23,9 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" cursor style -----.
+set guicursor=i:block
+
 " yes even python should abide to my indenting preferences
 " https://stackoverflow.com/questions/64676540/vim-doesnt-respect-vimrc-indentation-settings
 let g:python_recommended_style = 0
@@ -138,11 +141,12 @@ nnoremap <expr> <s-tab> &filetype != 'netrw' ? ':bp<cr>' : ''
 vnoremap <leader><leader> <esc>
 
 " -- cursor.
+" -- cursor - position.
 if has("autocmd")
   augroup restoreCursor
   au!
 
-  " restore last cursor position
+  " restore last cursor position - when coming back to the same file
   " https://opensource.apple.com/source/vim/vim-47/runtime/vimrc_example.vim.auto.html
   autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
@@ -151,6 +155,9 @@ if has("autocmd")
 
   augroup END
 endif
+
+" -- cursor - style.
+set guicursor=i:block
 
 " load personal, regional or machine specific hacks.
 silent! source ~/.dotfiles/hacks/vim/keyboard.hacks.vim
