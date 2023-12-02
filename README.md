@@ -119,10 +119,11 @@ ln -s ~/.dotfiles/.vim ~/.vim
 ```
 > and for `neovim`:
 ```
-mkdir -p ~/.config/nvim
+mkdir -p ~/.config/nvim/after
 ln -s ~/work/env/dotfiles ~/.dotfiles
 ln -s ~/.dotfiles/.vimrc ~/.config/nvim/init.vim
 ln -s ~/.dotfiles/.vim/colors ~/.config/nvim/colors
+ln -s ~/.dotfiles/.vim/plugin ~/.config/nvim/after/plugin
 ```
 
 ### :popcorn: Why `vim`?
