@@ -108,7 +108,7 @@ If you want more granularity use <kbd>%</kbd>, ie. use <kbd>7</kbd> <kbd>5</kbd>
 > (yes yes there is a logic to the whole madness :smiling_face_with_three_hearts: I promise)
 
 ### :wrench: install and use
-Where these configuration files should go depends on which `vim` you are actually using (ie. standard `vim` or `neovim`)
+Where these configuration files should go depends on which `vim` you are actually using (ie. `vim` or `neovim`)
 > Here I will assume you have cloned this [`dotfiles`](https://github.com/paperlib/dotfiles) repository to your local `~/work/env/dotfiles`
 
 > in that case for `vim` we have:
