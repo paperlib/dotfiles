@@ -76,7 +76,7 @@ Others:
   [`netrw`](https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/) on the directory of the current file
 * Use <kbd>,</kbd> + <kbd>.</kbd> to clear highlighted searches
 
-### :electric_plug: and finally, a few plugin related shortcuts:
+### 🔌 and finally, a few plugin related shortcuts:
 
 * [tpope/vim-commentary](https://github.com/tpope/vim-commentary)
   - Use <kbd>-</kbd> to comment the current line or selection
