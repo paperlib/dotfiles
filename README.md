@@ -107,5 +107,23 @@ If you want more granularity use <kbd>%</kbd>, ie. use <kbd>7</kbd> <kbd>5</kbd>
 > or as someone eloquently quipped on stackoverflow <b>[Your problem with Vim is that you don't grok vi.](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118)</b><br>
 > (yes yes there is a logic to the whole madness :smiling_face_with_three_hearts: I promise)
 
+### :wrench: install and use
+Where these configuration files should go depends on which `vim` you are actually using (ie. standard `vim` or `neovim`)
+> Here I will assume you have cloned this [`dotfiles`](https://github.com/paperlib/dotfiles) repository to your local `~/work/env/dotfiles`
+
+> in that case for `vim` we have:
+```
+ln -s ~/work/env/dotfiles ~/.dotfiles
+ln -s ~/.dotfiles/.vimrc ~/.vimrc
+ln -s ~/.dotfiles/.vim ~/.vim
+```
+> and for `neovim`:
+```
+mkdir -p ~/.config/nvim
+ln -s ~/work/env/dotfiles ~/.dotfiles
+ln -s ~/.dotfiles/.vimrc ~/.config/nvim/init.vim
+ln -s ~/.dotfiles/.vim/colors ~/.config/nvim/colors
+```
+
 ### :popcorn: Why `vim`?
 Yeah, why the fuck `vim`?
