@@ -109,21 +109,21 @@ If you want more granularity use <kbd>%</kbd>, ie. use <kbd>7</kbd> <kbd>5</kbd>
 
 ### :wrench: install and use
 Where these configuration files should go depends on which `vim` you are actually using (ie. `vim` or `neovim`)
-> Here I will assume you have cloned this [`dotfiles`](https://github.com/paperlib/dotfiles) repository to your local `~/work/env/dotfiles`
+> Here I will assume you have cloned this [`dotfiles`](https://github.com/paperlib/dotfiles) repository to your local `~/.local/dotfiles`<br>
+> eg. `git -C .local clone https://github.com/paperlib/dotfiles`
 
 > in that case for `vim` we have:
 ```
-ln -s ~/work/env/dotfiles ~/.dotfiles
-ln -s ~/.dotfiles/.vimrc ~/.vimrc
-ln -s ~/.dotfiles/.vim ~/.vim
+ln -sr ~/.local/dotfiles/.vimrc ~/.vimrc
+ln -sr ~/.local/dotfiles/.vim ~/.vim
 ```
 > and for `neovim`:
 ```
 mkdir -p ~/.config/nvim/after
-ln -s ~/work/env/dotfiles ~/.dotfiles
-ln -s ~/.dotfiles/.vimrc ~/.config/nvim/init.vim
-ln -s ~/.dotfiles/.vim/colors ~/.config/nvim/colors
-ln -s ~/.dotfiles/.vim/plugin ~/.config/nvim/after/plugin
+
+ln -sr ~/.local/dotfiles/.vimrc .config/nvim/init.vim
+ln -sr ~/.local/dotfiles/.vim/colors .config/nvim/colors
+ln -sr ~/.local/dotfiles/.vim/plugin .config/nvim/after/plugin
 ```
 
 ### :popcorn: Why `vim`?
