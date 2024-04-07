@@ -160,7 +160,7 @@ endif
 set guicursor=i:block
 
 " load personal, regional or machine specific hacks.
-silent! source ~/.dotfiles/hacks/vim/keyboard.hacks.vim
+silent! source ~/.local/dotfiles/hacks/vim/keyboard.hacks.vim
 
 " finally - let's get real ---------------------------------.
 if has('nvim')  " -- let's setup a real IDE/PDE for VI. ---.
