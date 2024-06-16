@@ -69,10 +69,11 @@ vnoremap d "_d
 " https://vimhelp.org/gui_w32.txt.html#CTRL-V-alternative
 " https://searene.github.io/2015/12/25/map-Ctrl-V-as-Ctrl-Q-in-vim
 " https://stackoverflow.com/questions/426896/vim-ctrl-v-conflict-with-windows-paste
-nnoremap <c-v> p
-inoremap <c-v> <esc>pa
+" NOTE: this cross-platform clipboard shit in vim/neovim is such a headache!
+nnoremap <c-v> P
+inoremap <c-v> <c-r>"
 " and ... g'damn paste in command mode!!!!!
-cnoremap <c-v> <c-r>+
+cnoremap <c-v> <c-r>"
 
 " in neovim >0.9 pastetoggle has been deprecated
 " *but* we do have cases where the 'Just Paste It(tm)' doesn't work:
