@@ -74,7 +74,13 @@ inoremap <c-v> <esc>p
 " and ... g'damn paste in command mode!!!!!
 cnoremap <c-v> <c-r>+
 
-set pastetoggle=<f5> " in neovim >0.9 pastetoggle has been deprecated
+" in neovim >0.9 pastetoggle has been deprecated
+" *but* we do have cases where the 'Just Paste It(tm)' doesn't work:
+" https://stackoverflow.com/questions/76687544/emulate-pastetoggle-in-neovim
+" luckily `paste` while deprecated still works, so bringing this back for all
+" (ie. this works in both neovim *and* vim)
+nnoremap <silent> <f5> :set paste!<cr>
+inoremap <silent> <f5> <esc>:set paste!<cr>i
 " do note the :redrawstatus here: force redraw to immediatly update the status line
 map <silent> <f9> :let b:filemetaline=!get(b:, 'filemetaline', 0)<cr>:redrawstatus<cr>
 
