@@ -85,8 +85,8 @@ inoremap <silent> <f5> <esc>:set paste!<cr>i
 map <silent> <f9> :let b:filemetaline=!get(b:, 'filemetaline', 0)<cr>:redrawstatus<cr>
 
 " select using arrow keys!
-nnoremap <s-up> v<up>
-nnoremap <s-down> v<down>
+nnoremap <s-up> V
+nnoremap <s-down> V
 nnoremap <s-right> v<right>
 nnoremap <s-left> v<left>
 
