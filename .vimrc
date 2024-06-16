@@ -70,6 +70,11 @@ vnoremap d "_d
 " https://searene.github.io/2015/12/25/map-Ctrl-V-as-Ctrl-Q-in-vim
 " https://stackoverflow.com/questions/426896/vim-ctrl-v-conflict-with-windows-paste
 " NOTE: this cross-platform clipboard shit in vim/neovim is such a headache!
+" references:
+" https://stackoverflow.com/questions/2861627/paste-in-insert-mode
+" vim's clipboard "unnamed" and "unnamedplus": https://stackoverflow.com/q/30691466/4397909
+" https://learnvim.irian.to/basics/registers
+" https://renenyffenegger.ch/notes/development/vim/script/vimscript/functions/has
 nnoremap <c-v> P
 
 if has("clipboard")
