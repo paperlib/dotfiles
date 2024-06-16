@@ -70,7 +70,7 @@ vnoremap d "_d
 " https://searene.github.io/2015/12/25/map-Ctrl-V-as-Ctrl-Q-in-vim
 " https://stackoverflow.com/questions/426896/vim-ctrl-v-conflict-with-windows-paste
 nnoremap <c-v> p
-inoremap <c-v> <esc>p
+inoremap <c-v> <esc>pa
 " and ... g'damn paste in command mode!!!!!
 cnoremap <c-v> <c-r>+
 
