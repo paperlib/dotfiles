@@ -22,5 +22,8 @@ require("lazy").setup({
   "tpope/vim-commentary",
   "tpope/vim-fugitive",
 
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = { indent = { char = "│" } } }
+  {
+    "lukas-reineke/indent-blankline.nvim", main = "ibl",
+    opts = { indent = { char = "│" }, scope = { show_start = false } }
+  }
 })
