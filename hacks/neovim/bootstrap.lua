@@ -1,6 +1,9 @@
 vim.g.mapleader      = ' '
 vim.g.maplocalleader = ' '
 
+-- yes I want a g*damn blinking cursor ------.
+vim.opt.guicursor:append('a:blinkon1') -- WTF.
+
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
