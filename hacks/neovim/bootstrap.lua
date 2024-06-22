@@ -28,5 +28,26 @@ require("lazy").setup({
   {
     "lukas-reineke/indent-blankline.nvim", main = "ibl",
     opts = { indent = { char = "│" }, scope = { show_start = false } }
+  },
+
+  {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require("gitsigns").setup({
+        vim.cmd(" highlight SignColumn      ctermbg=NONE guibg=NONE "),
+        vim.cmd(" highlight GitGutterAdd    ctermbg=NONE guibg=NONE "),
+        vim.cmd(" highlight GitGutterChange ctermbg=NONE guibg=NONE "),
+        vim.cmd(" highlight GitGutterDelete ctermbg=NONE guibg=NONE "),
+
+        signs = {
+          add          = { text = '┃' },
+          change       = { text = '┃' },
+          delete       = { text = '_' },
+          topdelete    = { text = '‾' },
+          changedelete = { text = '~' },
+          untracked    = { text = '┆' },
+        }
+      })
+    end,
   }
 })
