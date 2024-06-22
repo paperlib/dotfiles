@@ -166,7 +166,7 @@ if has("autocmd")
   " restore last cursor position - when coming back to the same file
   " https://opensource.apple.com/source/vim/vim-47/runtime/vimrc_example.vim.auto.html
   autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit' |
     \   exe "normal! g`\"" |
     \ endif
 
