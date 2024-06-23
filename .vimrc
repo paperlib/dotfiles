@@ -85,13 +85,8 @@ else
   cnoremap <c-v> <c-r>"
 endif
 
-" in neovim >0.9 pastetoggle has been deprecated
-" *but* we do have cases where the 'Just Paste It(tm)' doesn't work:
-" https://stackoverflow.com/questions/76687544/emulate-pastetoggle-in-neovim
-" luckily `paste` while deprecated still works, so bringing this back for all
-" (ie. this works in both neovim *and* vim)
-nnoremap <silent> <f5> :set paste!<cr>
-inoremap <silent> <f5> <esc>:set paste!<cr>i
+set pastetoggle=<f5> " in neovim >0.9 pastetoggle has been deprecated. ---.
+" ------------------ > see hacks/neovim/bootstrap.lua for more details. --.
 " do note the :redrawstatus here: force redraw to immediatly update the status line
 map <silent> <f9> :let b:filemetaline=!get(b:, 'filemetaline', 0)<cr>:redrawstatus<cr>
 

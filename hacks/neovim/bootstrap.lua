@@ -4,6 +4,14 @@ vim.g.maplocalleader = ' '
 -- yes I want a g*damn blinking cursor ------.
 vim.opt.guicursor:append('a:blinkon1') -- WTF.
 
+-- in neovim >0.9 pastetoggle has been deprecated
+-- *but* we do have cases where the 'Just Paste It(tm)' doesn't work:
+-- https://stackoverflow.com/questions/76687544/emulate-pastetoggle-in-neovim
+-- luckily `paste` while deprecated still works, so this is a workaround of sorts
+-- for more details see: https://vimhelp.org/options.txt.html#%27paste%27
+vim.keymap.set('n', '<f5>', ':set paste!<cr>', { noremap = true, silent = true })
+vim.keymap.set('i', '<f5>', ':set paste!<cr>', { noremap = true, silent = true })
+
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
