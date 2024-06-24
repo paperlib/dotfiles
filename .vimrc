@@ -90,6 +90,10 @@ set pastetoggle=<f5> " in neovim >0.9 pastetoggle has been deprecated. ---.
 " do note the :redrawstatus here: force redraw to immediatly update the status line
 map <silent> <f9> :let b:filemetaline=!get(b:, 'filemetaline', 0)<cr>:redrawstatus<cr>
 
+" misc: let's map ctrl-z to undo (instead of having it stop *vim by default)
+nnoremap <c-z> u
+inoremap <c-z> <c-o>u
+
 " select using arrow keys!
 nnoremap <s-up> V
 nnoremap <s-down> V
