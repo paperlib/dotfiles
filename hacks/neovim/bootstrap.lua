@@ -9,8 +9,8 @@ vim.opt.guicursor:append('a:blinkon1') -- WTF.
 -- https://stackoverflow.com/questions/76687544/emulate-pastetoggle-in-neovim
 -- luckily `paste` while deprecated still works, so this is a workaround of sorts
 -- for more details see: https://vimhelp.org/options.txt.html#%27paste%27
-vim.keymap.set('n', '<f5>', ':set paste!<cr>', { noremap = true, silent = true })
-vim.keymap.set('i', '<f5>', ':set paste!<cr>', { noremap = true, silent = true })
+vim.keymap.set('n', '<f5>', '<cmd>:set paste!<cr>', { noremap = true, silent = true })
+vim.keymap.set('i', '<f5>', '<cmd>:set paste!<cr>', { noremap = true, silent = true })
 
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
