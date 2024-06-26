@@ -1,6 +1,14 @@
 vim.g.mapleader      = ' '
 vim.g.maplocalleader = ' '
 
+-- set the signcolumn to the right of the number column
+-- https://www.reddit.com/r/neovim/comments/14yjoyh/how_to_get_gitsigns_or_equivalent_to_the_right_of
+-- https://www.reddit.com/r/neovim/comments/107ms1s/the_new_signcolumn_merge_allows_us_to_set_a
+vim.opt.statuscolumn = '%=%l%s%C'
+
+-- and because of the above, lets keep the sign column around (always)
+vim.opt.signcolumn = 'yes'
+
 -- yes I want a g*damn blinking cursor ------.
 vim.opt.guicursor:append('a:blinkon1') -- WTF.
 
