@@ -135,7 +135,8 @@ let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 let mapleader = " "
 
 " toggle the file explorer (opens on the current working directory.)
-nmap <leader>. :Lexplore<cr>
+nmap <leader><leader>      :Lexplore<cr>
+vmap <leader><leader> <esc>:Lexplore<cr>
 " open the file explorer (on the directory of the current file.)
 nmap <leader>, :Lexplore %:p:h<cr>
 
@@ -153,10 +154,6 @@ map <c-left> <c-w>h
 " switch between buffers
 nnoremap <expr> <tab>   &filetype != 'netrw' ? ':bn<cr>' : ''
 nnoremap <expr> <s-tab> &filetype != 'netrw' ? ':bp<cr>' : ''
-
-" use this instead of <esc> in visual mode -------------.
-" somehow this reacts faster than hitting <esc> directly.
-vnoremap <leader><leader> <esc>
 
 " -- cursor.
 " -- cursor - position.

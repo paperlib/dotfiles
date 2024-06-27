@@ -76,12 +76,12 @@ require("lazy").setup({
       "MunifTanjim/nui.nvim",
     },
     config = function()
-      vim.keymap.set("n", "<leader>.",  ":Neotree filesystem toggle left<CR>",  {})
-      vim.keymap.set("n", "<leader>bf", ":Neotree buffers    reveal float<CR>", {})
+      vim.keymap.set("n", "<leader><leader>",      ":Neotree filesystem toggle left<cr>", {})
+      vim.keymap.set("v", "<leader><leader>", "<esc>:Neotree filesystem toggle left<cr>", {})
 
       require("neo-tree").setup({
-        filesystem = { follow_current_file = { enabled = true } },
-        buffers    = { follow_current_file = { enabled = true } }
+        filesystem = { follow_current_file = { enabled = true, leave_dirs_open = true } },
+        buffers    = { follow_current_file = { enabled = true, leave_dirs_open = true } }
       })
     end
   }
