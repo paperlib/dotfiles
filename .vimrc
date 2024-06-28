@@ -152,8 +152,8 @@ map <c-right> <c-w>l
 map <c-left> <c-w>h
 
 " switch between buffers
-nnoremap <expr> <tab>   &filetype != 'netrw' ? ':bn<cr>' : ''
-nnoremap <expr> <s-tab> &filetype != 'netrw' ? ':bp<cr>' : ''
+nnoremap <silent> <expr> <tab>   &filetype != 'netrw' ? ':bn<cr>' : ''
+nnoremap <silent> <expr> <s-tab> &filetype != 'netrw' ? ':bp<cr>' : ''
 
 " -- cursor.
 " -- cursor - position.
