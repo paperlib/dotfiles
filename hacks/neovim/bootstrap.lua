@@ -76,8 +76,8 @@ require("lazy").setup({
       "MunifTanjim/nui.nvim",
     },
     config = function()
-      vim.keymap.set("n", "<leader><leader>",      ":Neotree filesystem toggle left<cr>", {})
-      vim.keymap.set("v", "<leader><leader>", "<esc>:Neotree filesystem toggle left<cr>", {})
+      vim.keymap.set("n", "<leader><leader>",      ":Neotree filesystem toggle left<cr>", { silent = true })
+      vim.keymap.set("v", "<leader><leader>", "<esc>:Neotree filesystem toggle left<cr>", { silent = true })
 
       require("neo-tree").setup({
         filesystem = { follow_current_file = { enabled = true, leave_dirs_open = true } },
