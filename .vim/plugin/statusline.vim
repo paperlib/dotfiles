@@ -22,20 +22,33 @@ set statusline+=%#VisualMode#%{(get(g:currentmode,mode(),'')==#'vb')?'\ \ V\ ':'
 
 set statusline+=%#StatusLine#
 
-set statusline+=\ %f
+set statusline+=\ %{GetFileOrExplorer()}
 set statusline+=\ 
 set statusline+=%{GitBranch()}
-set statusline+=%#ErrorMsg#%{&modified?(&readonly?'[RO]':''):''}
-set statusline+=%#StatusLine#%{!&modified?(&readonly?'[RO]':''):''}
+set statusline+=%#ErrorMsg#%{&modified&&!IsFileExplorer()?(&readonly?'[RO]':''):''}
+set statusline+=%#StatusLine#%{!&modified&&!IsFileExplorer()?(&readonly?'[RO]':''):''}
 set statusline+=%#StatusLine#
 set statusline+=%{&readonly?'\ ':''}
-set statusline+=%m
-set statusline+=%{&modified?'\ ':''}
+set statusline+=%{&modified?'[+]\ ':''}
 set statusline+=%{&paste?'[paste]':''}
 set statusline+=%=
 set statusline+=%{FileMetaLine()}
+
 set statusline+=\ %9(%c,%l%)
 set statusline+=%7P
+
+" file explorer
+function! IsFileExplorer()
+  return ((&filetype == 'netrw') || (&filetype == 'neo-tree')) ? v:true : v:false
+endfunction
+
+function! GetFileOrExplorer()
+  if IsFileExplorer()
+    return &filetype
+  else
+    return expand('%@')
+  endif
+endfunction
 
 " file details
 " file format, encoding and type.
