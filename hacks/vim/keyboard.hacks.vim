@@ -10,6 +10,15 @@ vmap - <Plug>Commentary
 
 " https://github.com/tpope/vim-fugitive
 nmap <leader>gg :Gvdiffsplit<cr>
+" view git history - in a vertical split to the right of the file viewed
+" hit <cr> on a given commit to view the details of that commit
+" hit <ctrl-o> to go back
+nmap <leader>gh :bo vertical Git log<cr>
+" git status
+nmap <leader>gs :bo vertical Git<cr>
+" nmap <leader>gs :bo Git<cr><bar> :resize 7<cr>
+" git add & commit the current file
+nmap <leader>ga :Git add % <bar> :bo vertical Git commit<cr>
 
 " surrounding text between quotes, double quotes etc.
 " https://github.com/machakann/vim-sandwich
