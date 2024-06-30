@@ -95,6 +95,11 @@ map <silent> <f9> :let b:filemetaline=!get(b:, 'filemetaline', 0)<cr>:redrawstat
 " misc: let's map ctrl-z to undo (instead of having it stop *vim by default)
 nnoremap <c-z> u
 inoremap <c-z> <c-o>u
+" misc: sometimes we want to go to the eol without takind the eol new line
+" note: on my keyboard £ is right above $, so shift-$ = £
+nnoremap £ g_
+vnoremap £ g_
+
 
 " misc: another one of those "setup the normal shortcuts" -> this time <ctrl-s> to save a file
 " -> check if your terminal is already using <c-s> for flow control (many *nix do), see:
@@ -160,8 +165,8 @@ map <c-right> <c-w>l
 map <c-left> <c-w>h
 
 " switch between buffers
-nnoremap <silent> <expr> <tab>   index(['netrw', 'fugitive'], &filetype) < 0 ? ':bn<cr>' : ''
-nnoremap <silent> <expr> <s-tab> index(['netrw', 'fugitive'], &filetype) < 0 ? ':bp<cr>' : ''
+nnoremap <silent> <expr> <tab>   index(['netrw', 'fugitive', 'gitcommit'], &filetype) < 0 ? ':bn<cr>' : ''
+nnoremap <silent> <expr> <s-tab> index(['netrw', 'fugitive', 'gitcommit'], &filetype) < 0 ? ':bp<cr>' : ''
 
 " -- cursor.
 " -- cursor - position.
