@@ -64,7 +64,7 @@ nnoremap x "_x
 nnoremap d "_d
 nnoremap D "_D
 vnoremap d "_d
-" and now setup the normal paste shortcuts.
+" and now setup the normal copy/paste shortcuts.
 " notes on remapping ctrl-v:
 " https://github.com/paperlib/dotfiles#heart-vimrc-gimme-normal-shortcuts
 " -- see also additional information here:
@@ -95,6 +95,14 @@ map <silent> <f9> :let b:filemetaline=!get(b:, 'filemetaline', 0)<cr>:redrawstat
 " misc: let's map ctrl-z to undo (instead of having it stop *vim by default)
 nnoremap <c-z> u
 inoremap <c-z> <c-o>u
+
+" misc: another one of those "setup the normal shortcuts" -> this time <ctrl-s> to save a file
+" -> check if your terminal is already using <c-s> for flow control (many *nix do), see:
+" https://stackoverflow.com/questions/3446320/in-vim-how-to-map-save-to-ctrl-s
+" https://vim.fandom.com/wiki/Map_Ctrl-S_to_save_current_or_new_files
+nnoremap <silent> <c-s> :update<cr>
+vnoremap <silent> <c-s> <c-c>:update<cr>
+inoremap <silent> <c-s> <c-o>:update<cr>
 
 " select using arrow keys!
 nnoremap <s-up> V
@@ -152,8 +160,8 @@ map <c-right> <c-w>l
 map <c-left> <c-w>h
 
 " switch between buffers
-nnoremap <silent> <expr> <tab>   &filetype != 'netrw' ? ':bn<cr>' : ''
-nnoremap <silent> <expr> <s-tab> &filetype != 'netrw' ? ':bp<cr>' : ''
+nnoremap <silent> <expr> <tab>   index(['netrw', 'fugitive'], &filetype) < 0 ? ':bn<cr>' : ''
+nnoremap <silent> <expr> <s-tab> index(['netrw', 'fugitive'], &filetype) < 0 ? ':bp<cr>' : ''
 
 " -- cursor.
 " -- cursor - position.
