@@ -165,8 +165,8 @@ map <c-right> <c-w>l
 map <c-left> <c-w>h
 
 " switch between buffers
-nnoremap <silent> <expr> <tab>   index(['netrw', 'fugitive', 'gitcommit'], &filetype) < 0 ? ':bn<cr>' : ''
-nnoremap <silent> <expr> <s-tab> index(['netrw', 'fugitive', 'gitcommit'], &filetype) < 0 ? ':bp<cr>' : ''
+nnoremap <silent> <expr> <tab>   index(['netrw', 'fugitive', 'gitcommit', 'git'], &filetype) < 0 ? ':bn<cr>' : ''
+nnoremap <silent> <expr> <s-tab> index(['netrw', 'fugitive', 'gitcommit', 'git'], &filetype) < 0 ? ':bp<cr>' : ''
 
 " -- cursor.
 " -- cursor - position.
@@ -183,9 +183,6 @@ if has("autocmd")
 
   augroup END
 endif
-
-" -- cursor - style.
-set guicursor=i:block
 
 " load personal, regional or machine specific hacks.
 silent! source ~/.local/dotfiles/hacks/vim/keyboard.hacks.vim
