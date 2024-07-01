@@ -15,9 +15,10 @@ nmap <leader>gd :Gvdiffsplit<cr>
 " hit <ctrl-o> to go back
 nmap <silent> <leader>gh :bo vertical Git log %<cr><bar>:setlocal nobuflisted<cr>
 " git status
+nmap <silent> <leader>gg :bo vertical Git<cr><bar>:setlocal nobuflisted<cr>
 nmap <silent> <leader>gs :bo vertical Git<cr><bar>:setlocal nobuflisted<cr>
 " git add & commit the current file
-nmap <leader>gg :bo vertical Git commit %<cr>
+nmap <leader>gc :bo vertical Git commit %<cr>
 
 " surrounding text between quotes, double quotes etc.
 " https://github.com/machakann/vim-sandwich
