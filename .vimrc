@@ -45,8 +45,8 @@ set ignorecase
 set smartcase
 
 " clearing the highlight after search
-nmap <silent> <esc><esc> :noh<cr><esc>
-nmap <silent> ,.         :nohlsearch<cr>
+nmap <silent> <esc><esc> <esc>:noh<cr><esc>
+nmap <silent> ,.         <esc>:nohlsearch<cr>
 
 " show tabs, trailing whitespace & invisible spaces.
 set list " ----------------------------------------.
