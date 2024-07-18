@@ -36,6 +36,7 @@ Yes yes, I mean like you know, using shift arrow keys
 * Use <kbd>⇧ Shift</kbd> <kbd>←</kbd> to start selecting from where you are rightwards
   > Of course all of this combines with any of [vim's language](https://danielmiessler.com/study/vim/#language) constructs, meaning:
   > * <kbd>⇧ Shift</kbd> <kbd>→</kbd> + <kbd>$</kbd> will select everything from the cursor position until the end of the line
+  > * <kbd>⇧ Shift</kbd> <kbd>→</kbd> + <kbd>£</kbd> will select everything from the cursor position until the end of the line _but without the new line character_
   > * <kbd>⇧ Shift</kbd> <kbd>↓</kbd> + <kbd>G</kbd> will select everything from the current line to the end of the file
   > * <kbd>⇧ Shift</kbd> <kbd>↑</kbd> + <kbd>g</kbd> + <kbd>g</kbd> to select from the current line to the top of the file
   > * etc etc etc you got the point.
