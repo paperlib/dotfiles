@@ -126,6 +126,18 @@ ln -sr ~/.local/dotfiles/.vimrc .config/nvim/init.vim
 ln -sr ~/.local/dotfiles/.vim/colors .config/nvim/colors
 ln -sr ~/.local/dotfiles/.vim/plugin .config/nvim/after/plugin
 ```
+> :window: Notes for **Windows**:<br>
+>
+> on Windows we can use `mklink` which is its equivalent to `ln` on *nix/macos machines (caveat: it does require admin rights though)<br>
+> * for `vim` on Windows its `.vim` directory is `vimfiles` (ie. link to `vimfiles` instead of `.vim`)<br>
+> * and for `nvim` setup an [`XDG_CONFIG_HOME`](https://neovim.io/doc/user/starting.html#_standard-paths) environment variable to point to `%HOMEPATH%\.config\nvim` then symlink likewise:
+> ```
+> mkdir "%HOMEPATH%\.config\nvim\after"
+> 
+> mklink    "%HOMEPATH%\.config\nvim\init.vim"     "%HOMEPATH%\.local\dotfiles\.vimrc"
+> mklink /d "%HOMEPATH%\.config\nvim\colors"       "%HOMEPATH%\.local\dotfiles\.vim\colors"
+> mklink /d "%HOMEPATH%\.config\nvim\after\plugin" "%HOMEPATH%\.local\dotfiles\.vim\plugin"
+> ```
 
 ### :popcorn: Why `vim`?
 Yeah, why the fuck `vim`?
