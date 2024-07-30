@@ -71,11 +71,9 @@ Next, let's flip through open windows:
   > please use [`nvim`](https://neovim.io/), everything is sooo much easier there.
 
 Others:
-* Use <kbd>Space</kbd> + <kbd>.</kbd> to toggle the file explorer
+* Use <kbd>Space</kbd> + <kbd>Space</kbd> to toggle the file explorer
   [`netrw`](https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/) on the current working directory
-* Use <kbd>Space</kbd> + <kbd>,</kbd> to open the file explorer
-  [`netrw`](https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/) on the directory of the current file
-* Use <kbd>,</kbd> + <kbd>.</kbd> to clear highlighted searches
+* Use <kbd>esc</kbd> + <kbd>esc</kbd> to clear highlighted searches
 
 ### 🔌 and finally, a few plugin related shortcuts:
 
