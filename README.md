@@ -136,6 +136,15 @@ ln -sr ~/.local/dotfiles/.vim/plugin .config/nvim/after/plugin
 > mklink /d "%HOMEPATH%\.config\nvim\colors"       "%HOMEPATH%\.local\dotfiles\.vim\colors"
 > mklink /d "%HOMEPATH%\.config\nvim\after\plugin" "%HOMEPATH%\.local\dotfiles\.vim\plugin"
 > ```
+> **~** **Nerd Fonts**<br>
+> are a quirky nighmare to get right for plain old "classic" Windows Command Prompt, so here a few hints:
+> * Nerd Fonts issue: [2.0 Fonts Can't Be Used in Windows cmd.exe/powershell.exe/wsl shells](https://github.com/ryanoasis/nerd-fonts/issues/269) #269
+> * and also Windows [Terminal Icons](https://github.com/devblackops/Terminal-Icons)
+> 
+> otherwise do use Font Patcher via Docker:
+> ```
+> docker run --rm -v <in-folder>:/in -v <out-folder>:/out nerdfonts/patcher -s --careful --xavgcharwidth --complete
+> ```
 
 ### :popcorn: Why `vim`?
 Yeah, why the fuck `vim`?
