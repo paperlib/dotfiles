@@ -143,7 +143,7 @@ ln -sr ~/.local/dotfiles/.vim/plugin .config/nvim/after/plugin
 > 
 > otherwise do use Font Patcher via Docker:
 > ```
-> docker run --rm -v <in-folder>:/in -v <out-folder>:/out nerdfonts/patcher -s --careful --xavgcharwidth --complete
+> docker run --rm -v <in>:/in -v <out>:/out nerdfonts/patcher -s --careful --xavgcharwidth --complete
 > ```
 
 ### :popcorn: Why `vim`?
