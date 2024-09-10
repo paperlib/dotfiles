@@ -146,6 +146,7 @@ ln -sr ~/.local/dotfiles/.vim/plugin .config/nvim/after/plugin
 > docker run --rm -v <in>:/in -v <out>:/out \
 >        nerdfonts/patcher -s --careful --xavgcharwidth --complete
 > ```
+> and :black_joker: if you are running in WSL also note: [clipboard registers + and * are slow on WSL2](https://github.com/neovim/neovim/issues/29712) #29712
 
 ### :popcorn: Why `vim`?
 Yeah, why the fuck `vim`?
