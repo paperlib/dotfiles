@@ -5,8 +5,13 @@
 set nocompatible
 
 " enable syntax highlighting before setting a background.
-" -> for some reason this is needed in VIM 7.4 / putty?-.
-syntax on
+" -> for some reason this is needed in VIM 7.4/putty? --.
+" NOTE: by default nvim syntax's enabled  --------------.
+" and for some crazy reason setting here interferes with
+" cursor position restores when editing .lua files!!! --.
+if !has('nvim')
+  syntax enable
+endif
 
 set background=dark
 colorscheme gruvbox8_hard
@@ -170,24 +175,13 @@ nnoremap <silent> <expr> <s-tab> index(['netrw', 'fugitive', 'gitcommit', 'git']
 
 " -- cursor.
 " -- cursor - position.
-if has("autocmd")
-  augroup restoreCursor
-  au!
-
-  " restore last cursor position - when coming back to the same file
-  " https://opensource.apple.com/source/vim/vim-47/runtime/vimrc_example.vim.auto.html
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit' |
-    \   exe "normal! g`\"" |
-    \ endif
-
-  augroup END
-endif
+" -- use a plugin to restore last cursor position
+" -- "vim-lastplace" does a good job and works both for vim and neovim
 
 " load personal, regional or machine specific hacks.
 silent! source ~/.local/dotfiles/hacks/vim/keyboard.hacks.vim
 
 " finally - let's get real ---------------------------------.
-if has('nvim')  " -- let's setup a real IDE/PDE for VI. ---.
+if has('nvim')  " -- let's setup a real IDE/PDE for VI.   --.
   silent source ~/.local/dotfiles/hacks/neovim/bootstrap.lua
 endif  " -- yep this is neovim! ----------------------------.

@@ -7,3 +7,6 @@
 [submodule ".vim/pack/tpope/start/vim-fugitive"]
 	path = .vim/pack/tpope/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
+[submodule ".vim/pack/farmergreg/start/vim-lastplace"]
+	path = .vim/pack/farmergreg/start/vim-lastplace
+	url = https://github.com/farmergreg/vim-lastplace

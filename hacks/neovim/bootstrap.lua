@@ -37,6 +37,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  "farmergreg/vim-lastplace",
   "machakann/vim-sandwich",
   "tpope/vim-commentary",
   "tpope/vim-fugitive",
