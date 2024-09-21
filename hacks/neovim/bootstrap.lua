@@ -50,12 +50,12 @@ require("lazy").setup({
   {
     "lewis6991/gitsigns.nvim",
     config = function()
-      require("gitsigns").setup({
-        vim.cmd(" highlight SignColumn      ctermbg=NONE guibg=NONE "),
-        vim.cmd(" highlight GitGutterAdd    ctermbg=NONE guibg=NONE "),
-        vim.cmd(" highlight GitGutterChange ctermbg=NONE guibg=NONE "),
-        vim.cmd(" highlight GitGutterDelete ctermbg=NONE guibg=NONE "),
+      vim.cmd(" highlight SignColumn      ctermbg=NONE guibg=NONE ")
+      vim.cmd(" highlight GitGutterAdd    ctermbg=NONE guibg=NONE ")
+      vim.cmd(" highlight GitGutterChange ctermbg=NONE guibg=NONE ")
+      vim.cmd(" highlight GitGutterDelete ctermbg=NONE guibg=NONE ")
 
+      require("gitsigns").setup({
         signs = {
           add          = { text = '┃' },
           change       = { text = '┃' },
