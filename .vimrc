@@ -94,8 +94,15 @@ endif
 
 set pastetoggle=<f5> " in neovim >0.9 pastetoggle has been deprecated. ---.
 " ------------------ > see hacks/neovim/bootstrap.lua for more details. --.
-" do note the :redrawstatus here: force redraw to immediatly update the status line
-map <silent> <f9> :let b:filemetaline=!get(b:, 'filemetaline', 0)<cr>:redrawstatus<cr>
+
+" show file meta information (file format, encoding and type)  ------------------------.
+" <f9> enables this globally: use <shift-f9> to see it only on the current file.     --.
+" do note the :redrawstatus here: force redraw to immediatly update the status line. --.
+map <silent> <f9>   :let g:filemetaline=!get(g:, 'filemetaline', 0)<cr>:redrawstatus<cr>
+map <silent> <s-f9> :let b:filemetaline=!get(b:, 'filemetaline', 0)<cr>:redrawstatus<cr>
+" note <f21> is simply <shift-f9>: ie. 12 standard and <shift> those for the next 12 --.
+" neovim in particular needs this: <shift-f9> shows up as <f21>                      --.
+map <silent> <f21>  :let b:filemetaline=!get(b:, 'filemetaline', 0)<cr>:redrawstatus<cr>
 
 " misc: let's map ctrl-z to undo (instead of having it stop *vim by default)
 nnoremap <c-z> u

@@ -52,10 +52,13 @@ endfunction
 
 " file details
 " file format, encoding and type.
+" allow for this file meta information to be set globally
+let g:filemetaline = 0
+" or per buffer / file
 let b:filemetaline = 0
 
 function! FileMetaLine()
-  let l:filemetaline = get(b:, 'filemetaline', 0)
+  let l:filemetaline = get(b:, 'filemetaline', 0) || get(g:, 'filemetaline', 0)
   let l:metaline = &fileformat . " | " . (strlen(&fenc)?&fenc:'none') . " | " . (strlen(&filetype)?&filetype:'none')
 
   return l:filemetaline && !IsFileExplorer() ? l:metaline : ''
