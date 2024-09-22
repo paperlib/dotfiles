@@ -98,8 +98,11 @@ require("lazy").setup({
       local configs = require("nvim-treesitter.configs")
 
       configs.setup({
-        highlight = { enable = true },
-        indent    = { enable = true }
+        -- for some reason macos neovim requires this for the treesitter ":checkhealth" to be fully green
+        -- https://www.reddit.com/r/neovim/comments/1ds8kcp/i_got_this_error_when_open_help_anyone_known_how
+        ensure_installed = { "vimdoc", "luadoc" },
+        highlight        = { enable = true },
+        indent           = { enable = true }
       })
     end
   }
