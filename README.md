@@ -87,6 +87,8 @@ Others:
   - Use <kbd>"</kbd> or <kbd>'</kbd> to surround the current selection with double quotes or single quotes
   - Use <kbd>[</kbd>, <kbd>{</kbd> or <kbd>(</kbd> to surround the current selection between carrets, curly braces or parenthesis
   - Use <kbd>]</kbd>, <kbd>}</kbd> or <kbd>)</kbd> to surround the current selection between carrets, curly braces or parenthesis _without adding a space_
+  - if a text is already enclosed: placing the cursor between the enclosing and hitting any enclosing will switch it<br>
+    (ie. placing the cursor between <kbd>"a text"</kbd> and hitting <kbd>'</kbd> will change it to <kbd>'a text'</kbd>)
 
 **Note**: once you have cloned this repo, to initialize and update the above plugins (git submodules) do:<br>
 `git submodule init; git submodule update`
