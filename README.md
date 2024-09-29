@@ -86,7 +86,7 @@ Others:
 * [machakann/vim-sandwich](https://github.com/machakann/vim-sandwich) _only active in select `V` mode_
   - Use <kbd>"</kbd> or <kbd>'</kbd> to surround the current selection with double quotes or single quotes
   - Use <kbd>[</kbd>, <kbd>{</kbd> or <kbd>(</kbd> to surround the current selection between carrets, curly braces or parenthesis
-  - Use <kbd>]</kbd>, <kbd>}</kbd> or <kbd>)</kbd> to surround the current selection between carrets, curly braces or parenthesis _without adding a space_
+  - Use <kbd>]</kbd>, <kbd>}</kbd> or <kbd>)</kbd> to achieve the same as above (just with the oposite characters)
   - if a text is already enclosed: placing the cursor between the enclosing and hitting any enclosing will switch it<br>
     (ie. placing the cursor between <kbd>"a text"</kbd> and hitting <kbd>'</kbd> will change it to <kbd>'a text'</kbd>)
 
