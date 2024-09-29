@@ -9,10 +9,12 @@ COLOR_GIT_DIRTY='\[\033[01;38;5;215m'
 COLOR_RESET='\[\033[0m\]'
 
 GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
 
 function git_prompt() {
   branch=$(__git_ps1 '%s')
   if [[ "$branch" ]]; then
+    branch=${branch/\%/+}
     echo "${COLOR_GIT_SIGN} ${COLOR_GIT_BRANCH}${branch/ / $COLOR_GIT_DIRTY} $COLOR_RESET"
   fi
 }
