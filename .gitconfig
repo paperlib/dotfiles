@@ -1,0 +1,7 @@
+
+; -- easy undo last commit
+; -- via https://x.com/t3dotgg/status/1808748157897167238
+
+[alias]
+  undo = reset --soft HEAD^
+
