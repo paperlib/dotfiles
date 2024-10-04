@@ -102,5 +102,48 @@ require("lazy").setup({
         indent    = { enable = true }
       })
     end
+  },
+
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-cmdline"
+    },
+    config = function()
+      local cmp = require 'cmp'
+
+      cmp.setup({
+        window = {
+          completion    = cmp.config.window.bordered(),
+          documentation = cmp.config.window.bordered(),
+        },
+        mapping = cmp.mapping.preset.insert({
+          ['<CR>']      = cmp.mapping.confirm { select = true },
+          ['<Tab>']     = cmp.mapping.select_next_item(),
+          ['<S-Tab>']   = cmp.mapping.select_prev_item(),
+          ['<C-Space>'] = cmp.mapping.complete()
+        }),
+        sources = cmp.config.sources({
+          { name = 'buffer', keyword_length = 3 },
+          { name = 'path', option = { get_cwd = function() return vim.fn.getcwd() end }   }
+        })
+      })
+
+      cmp.setup.cmdline({ '/', '?' }, {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = { { name = 'buffer' } }
+      })
+
+      cmp.setup.cmdline(':', {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = cmp.config.sources({
+          { name = 'path'    },
+          { name = 'cmdline' }
+        }),
+        matching = { disallow_symbol_nonprefix_matching = false }
+      })
+    end
   }
 })
