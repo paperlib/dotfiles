@@ -114,16 +114,19 @@ require("lazy").setup({
     config = function()
       local cmp = require 'cmp'
 
+      -- this follows the <tab> / <s-tab> completion convention - which a lot don't like
+      -- see tj devries for context: https://www.youtube.com/watch?v=_DnmphIwnjo
+      -- other useful links:
+      -- https://github.com/hrsh7th/nvim-cmp/discussions/1707
       cmp.setup({
         window = {
           completion    = cmp.config.window.bordered(),
           documentation = cmp.config.window.bordered(),
         },
         mapping = cmp.mapping.preset.insert({
-          ['<CR>']      = cmp.mapping.confirm { select = true },
-          ['<Tab>']     = cmp.mapping.select_next_item(),
-          ['<S-Tab>']   = cmp.mapping.select_prev_item(),
-          ['<C-Space>'] = cmp.mapping.complete()
+          ['<cr>']    = cmp.mapping.confirm { select = false },
+          ['<tab>']   = function() if cmp.visible() then cmp.select_next_item() else cmp.complete() end end,
+          ['<s-tab>'] = cmp.mapping.select_prev_item()
         }),
         sources = cmp.config.sources({
           { name = 'buffer', keyword_length = 3 },
@@ -137,10 +140,20 @@ require("lazy").setup({
       })
 
       cmp.setup.cmdline(':', {
-        mapping = cmp.mapping.preset.cmdline(),
+        mapping = cmp.mapping.preset.cmdline({
+          ['<cr>'] = {
+            c = function(default)
+              if cmp.visible() then
+                return cmp.confirm({ select = false })
+              end
+
+              default()
+            end
+          }
+        }),
         sources = cmp.config.sources({
           { name = 'path'    },
-          { name = 'cmdline' }
+          { name = 'cmdline', keyword_length = 3 }
         }),
         matching = { disallow_symbol_nonprefix_matching = false }
       })
