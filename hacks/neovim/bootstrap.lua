@@ -106,6 +106,8 @@ require("lazy").setup({
 
   {
     "hrsh7th/nvim-cmp",
+    event = { "InsertEnter", "CmdlineEnter" },
+
     dependencies = {
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-buffer",
@@ -124,12 +126,24 @@ require("lazy").setup({
           documentation = cmp.config.window.bordered(),
         },
         mapping = cmp.mapping.preset.insert({
-          ['<cr>']    = cmp.mapping.confirm { select = false },
-          ['<tab>']   = function() if cmp.visible() then cmp.select_next_item() else cmp.complete() end end,
-          ['<s-tab>'] = cmp.mapping.select_prev_item()
+          ['<cr>']      = cmp.mapping.confirm { select = false },
+          ['<tab>']     = cmp.mapping.select_next_item(),
+          ['<s-tab>']   = cmp.mapping.select_prev_item(),
+          ['<c-space>'] = cmp.mapping.complete({
+            -- on request completion
+            -- when we manually (force) request completion
+            -- we don't want the completion menu to disappear until we reach the "keyword_length"
+            -- -> ie. if we did specifically ask for completion, keep it on.. don't damn disappear
+            -- -> that means reset the "keyword_length" back to 1.
+            config = {
+              sources = {
+                { name = 'buffer', trigger_characters = { '.' }, keyword_length = 1 }
+              }
+            }
+          })
         }),
         sources = cmp.config.sources({
-          { name = 'buffer', keyword_length = 3 },
+          { name = 'buffer', trigger_characters = { '.' }, keyword_length = 5 },
           { name = 'path', option = { get_cwd = function() return vim.fn.getcwd() end }   }
         })
       })
@@ -142,6 +156,8 @@ require("lazy").setup({
       cmp.setup.cmdline(':', {
         mapping = cmp.mapping.preset.cmdline({
           ['<cr>'] = {
+            -- don't feed whatever autocomplete has for us on <cr>
+            -- -> rather "select" first and only then feed it in.
             c = function(default)
               if cmp.visible() then
                 return cmp.confirm({ select = false })
