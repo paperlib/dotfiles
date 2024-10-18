@@ -86,7 +86,11 @@ require("lazy").setup({
         filesystem = { follow_current_file = { enabled = true, leave_dirs_open = true } },
         buffers    = { follow_current_file = { enabled = true, leave_dirs_open = true } },
         popup_border_style = "rounded",
-        enable_git_status  = true
+        enable_git_status  = true,
+
+        -- the default unstaged icon seems to occupy 2 chars causing alignment issues.
+        -- this is particularly apparent when within tmux. --------------------------.
+        default_component_configs = { git_status = { symbols = { unstaged = 'u' } } }
       })
     end
   },
@@ -174,5 +178,21 @@ require("lazy").setup({
         matching = { disallow_symbol_nonprefix_matching = false }
       })
     end
+  },
+
+  {
+    "christoomey/vim-tmux-navigator",
+    cmd = {
+      "TmuxNavigateUp",
+      "TmuxNavigateDown",
+      "TmuxNavigateLeft",
+      "TmuxNavigateRight"
+    },
+    keys = {
+      { "<c-up>",    "<cmd>TmuxNavigateUp<cr>"    },
+      { "<c-down>",  "<cmd>TmuxNavigateDown<cr>"  },
+      { "<c-left>",  "<cmd>TmuxNavigateLeft<cr>"  },
+      { "<c-right>", "<cmd>TmuxNavigateRight<cr>" }
+    }
   }
 })
