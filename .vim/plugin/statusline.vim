@@ -1,4 +1,10 @@
 
+hi NormalMode  gui=bold,reverse
+hi InsertMode  gui=bold,reverse
+hi ReplaceMode gui=bold,reverse
+hi VisualMode  gui=bold,reverse
+hi CommandMode gui=bold,reverse
+
 hi NormalMode  cterm=bold,reverse
 hi InsertMode  cterm=bold,reverse
 hi ReplaceMode cterm=bold,reverse
