@@ -83,7 +83,10 @@ require("lazy").setup({
       vim.keymap.set("n", "<leader>gg", ":Neotree float git_status<cr>", { silent = true })
 
       require("neo-tree").setup({
-        filesystem = { follow_current_file = { enabled = true, leave_dirs_open = true } },
+        filesystem = {
+          use_libuv_file_watcher = true,
+          follow_current_file = { enabled = true, leave_dirs_open = true }
+        },
         buffers    = { follow_current_file = { enabled = true, leave_dirs_open = true } },
         popup_border_style = "rounded",
         enable_git_status  = true,
