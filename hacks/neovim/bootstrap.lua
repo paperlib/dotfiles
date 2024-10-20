@@ -163,11 +163,21 @@ require("lazy").setup({
       cmp.setup.cmdline(':', {
         mapping = cmp.mapping.preset.cmdline({
           ['<cr>'] = {
+            -- note: using "enter" (ie. <cr>) on the command line is tricky.
+            -- -> see comments in this block. -----------------------------.
             -- don't feed whatever autocomplete has for us on <cr>
             -- -> rather "select" first and only then feed it in.
             c = function(default)
               if cmp.visible() then
-                return cmp.confirm({ select = false })
+                if cmp.get_selected_entry() then
+                  -- if we hit "enter" and an entry is selected then sure that's what we want and "confirm" it
+                  -- (the "select = false" here is rather redundant and only added for emphasis.)
+                  return cmp.confirm({ select = false })
+                else
+                  -- otoh if we don't have anything selected then just close the completion pop-up
+                  -- imho this should be the default behaviour: it's so damn intuitive :-)
+                  return cmp.close()
+                end
               end
 
               default()
