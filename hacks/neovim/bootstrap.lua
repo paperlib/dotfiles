@@ -150,7 +150,7 @@ require("lazy").setup({
           })
         }),
         sources = cmp.config.sources({
-          { name = 'buffer', trigger_characters = { '.' }, keyword_length = 5 },
+          { name = 'buffer', trigger_characters = { '.' }, keyword_length = 7 },
           { name = 'path', option = { get_cwd = function() return vim.fn.getcwd() end }   }
         })
       })
