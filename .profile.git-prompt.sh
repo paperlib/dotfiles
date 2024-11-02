@@ -6,7 +6,7 @@
 # -- https://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html
 # -- https://zipcon.net/~swhite/docs/computers/linux/shell_prompts.html
 COLOR_GIT_SIGN='\[\033[01;38;5;230m\]'
-COLOR_GIT_BRANCH='\[\033[01;38;5;028m\]'
+COLOR_GIT_BRANCH='\[\033[01;38;5;046m\]'
 COLOR_GIT_DIRTY='\[\033[01;38;5;215m\]'
 COLOR_RESET='\[\033[0m\]'
 
