@@ -138,8 +138,13 @@ ln -sr ~/.local/dotfiles/.vim/plugin .config/nvim/after/plugin
 > mklink /d "%HOMEPATH%\.config\nvim\colors"       "%HOMEPATH%\.local\dotfiles\.vim\colors"
 > mklink /d "%HOMEPATH%\.config\nvim\after\plugin" "%HOMEPATH%\.local\dotfiles\.vim\plugin"
 > ```
-> **~** **Nerd Fonts**<br>
-> are a quirky nighmare to get right for plain old "classic" Windows Command Prompt, so here a few hints:
+> and :black_joker: if you are running in WSL also note: [clipboard registers + and * are slow on WSL2](https://github.com/neovim/neovim/issues/29712) #29712
+
+> **~** **[Nerd Fonts](https://www.nerdfonts.com)**<br>
+> > **if you are using [Ghostty](https://ghostty.org) you don't need any of this as it [has built-in nerd fonts](https://ghostty.org/docs/config#zero-configuration-philosophy)**<br>
+> > (that is, just use _any_ font of your choice and Nerd Fonts will be available regardless.)
+>
+> Nerd Font are a quirky nighmare to get right for plain old "classic" Windows Command Prompt or other old terms, so here a few hints:
 > * Nerd Fonts issue: [2.0 Fonts Can't Be Used in Windows cmd.exe/powershell.exe/wsl shells](https://github.com/ryanoasis/nerd-fonts/issues/269) #269
 > * and also Windows [Terminal Icons](https://github.com/devblackops/Terminal-Icons)
 > 
@@ -148,7 +153,6 @@ ln -sr ~/.local/dotfiles/.vim/plugin .config/nvim/after/plugin
 > docker run --rm -v <in>:/in -v <out>:/out \
 >        nerdfonts/patcher -s --careful --xavgcharwidth --complete
 > ```
-> and :black_joker: if you are running in WSL also note: [clipboard registers + and * are slow on WSL2](https://github.com/neovim/neovim/issues/29712) #29712
 
 ### :popcorn: Why `vim`?
 Yeah, why the fuck `vim`?
