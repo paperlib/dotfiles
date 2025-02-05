@@ -141,7 +141,7 @@ ln -sr ~/.local/dotfiles/.vim/plugin .config/nvim/after/plugin
 > and :black_joker: if you are running in WSL also note: [clipboard registers + and * are slow on WSL2](https://github.com/neovim/neovim/issues/29712) #29712
 
 > **~** **[Nerd Fonts](https://www.nerdfonts.com)**<br>
-> > **if you are using [Ghostty](https://ghostty.org) you don't need any of this as it [has built-in nerd fonts](https://ghostty.org/docs/config#zero-configuration-philosophy)**<br>
+> > :bulb: **if you are using [Ghostty](https://ghostty.org) you don't need any of this as it [has built-in nerd fonts](https://ghostty.org/docs/config#zero-configuration-philosophy)**<br>
 > > (that is, just use _any_ font of your choice and Nerd Fonts will be available regardless.)
 >
 > Nerd Font are a quirky nighmare to get right for plain old "classic" Windows Command Prompt or other old terms, so here a few hints:
