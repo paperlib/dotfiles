@@ -90,9 +90,6 @@ Others:
   - if a text is already enclosed: placing the cursor between the enclosing and hitting any enclosing will switch it<br>
     (ie. placing the cursor between <kbd>"a text"</kbd> and hitting <kbd>'</kbd> will change it to <kbd>'a text'</kbd>)
 
-**Note**: once you have cloned this repo, to initialize and update the above plugins (git submodules) do:<br>
-`git submodule init; git submodule update`
-
 ### :herb: Other _standard and very useful_ shortcuts:
 * Use <kbd>z</kbd> <kbd>z</kbd> to [center the current line on the screen](https://vi.stackexchange.com/questions/40/how-do-i-center-the-current-line-in-the-screen)<br>Equivalently use <kbd>z</kbd> <kbd>t</kbd> to align the current line to the <b>t</b>op of your terminal, or <kbd>z</kbd> <kbd>b</kbd> for the <b>b</b>ottom
 * Use <kbd>⇧ Shift</kbd> <kbd>g</kbd> to go to the end of your file<br>Equivalently use <kbd>g</kbd> <kbd>g</kbd> to do the opposite, ie. go to the top<br>
@@ -117,6 +114,9 @@ Where these configuration files should go depends on which `vim` you are actuall
 ```
 ln -sr ~/.local/dotfiles/.vimrc ~/.vimrc
 ln -sr ~/.local/dotfiles/.vim ~/.vim
+
+# -- initialize and/or update vim plugins.
+git submodule init; git submodule update
 ```
 > and for `neovim`:
 ```
