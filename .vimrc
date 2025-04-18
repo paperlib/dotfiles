@@ -92,8 +92,9 @@ else
   cnoremap <c-v> <c-r>"
 endif
 
-set pastetoggle=<f5> " in neovim >0.9 pastetoggle has been deprecated. ---.
-" ------------------ > see hacks/neovim/bootstrap.lua for more details. --.
+if !has('nvim')
+  set pastetoggle=<f5> " in neovim >0.9 pastetoggle has been deprecated. -.
+endif " ------------ > see hacks/neovim/bootstrap.lua for more details. --.
 
 " show file meta information (file format, encoding and type)  ------------------------.
 " <f9> enables this globally: use <shift-f9> to see it only on the current file.     --.
