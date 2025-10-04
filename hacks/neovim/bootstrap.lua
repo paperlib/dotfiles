@@ -112,85 +112,35 @@ require("lazy").setup({
   },
 
   {
-    "hrsh7th/nvim-cmp",
-    event = { "InsertEnter", "CmdlineEnter" },
+    'saghen/blink.cmp',
 
-    dependencies = {
-      "hrsh7th/cmp-path",
-      "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-cmdline"
+    version = '1.*',
+    dependencies = { 'rafamadriz/friendly-snippets' },
+
+    ---@module 'blink.cmp'
+    ---@type blink.cmp.Config
+    opts = {
+      keymap = {
+        preset      = 'default',
+        ["<cr>"]    = { "accept", "fallback" },
+        ["<tab>"]   = { "select_next", "snippet_forward", "fallback" },
+        ["<s-tab>"] = { "select_prev", "snippet_backward", "fallback" }
+      },
+
+      appearance = { nerd_font_variant = 'mono' },
+      completion = { documentation = { auto_show = false } },
+
+      sources    = {
+        min_keyword_length = 3,
+
+        default = { 'lsp', 'path', 'snippets', 'buffer' },
+      },
+
+      fuzzy      = { implementation = 'lua' },
+      signature  = { enabled = true }
     },
-    config = function()
-      local cmp = require 'cmp'
 
-      -- this follows the <tab> / <s-tab> completion convention - which a lot don't like
-      -- see tj devries for context: https://www.youtube.com/watch?v=_DnmphIwnjo
-      -- other useful links:
-      -- https://github.com/hrsh7th/nvim-cmp/discussions/1707
-      cmp.setup({
-        window = {
-          completion    = cmp.config.window.bordered(),
-          documentation = cmp.config.window.bordered(),
-        },
-        mapping = cmp.mapping.preset.insert({
-          ['<cr>']      = cmp.mapping.confirm { select = false },
-          ['<tab>']     = cmp.mapping.select_next_item(),
-          ['<s-tab>']   = cmp.mapping.select_prev_item(),
-          ['<c-space>'] = cmp.mapping.complete({
-            -- on request completion
-            -- when we manually (force) request completion
-            -- we don't want the completion menu to disappear until we reach the "keyword_length"
-            -- -> ie. if we did specifically ask for completion, keep it on.. don't damn disappear
-            -- -> that means reset the "keyword_length" back to 1.
-            config = {
-              sources = {
-                { name = 'buffer', trigger_characters = { '.' }, keyword_length = 1 }
-              }
-            }
-          })
-        }),
-        sources = cmp.config.sources({
-          { name = 'buffer', trigger_characters = { '.' }, keyword_length = 7 },
-          { name = 'path', option = { get_cwd = function() return vim.fn.getcwd() end }   }
-        })
-      })
-
-      cmp.setup.cmdline({ '/', '?' }, {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = { { name = 'buffer' } }
-      })
-
-      cmp.setup.cmdline(':', {
-        mapping = cmp.mapping.preset.cmdline({
-          ['<cr>'] = {
-            -- note: using "enter" (ie. <cr>) on the command line is tricky.
-            -- -> see comments in this block. -----------------------------.
-            -- don't feed whatever autocomplete has for us on <cr>
-            -- -> rather "select" first and only then feed it in.
-            c = function(default)
-              if cmp.visible() then
-                if cmp.get_selected_entry() then
-                  -- if we hit "enter" and an entry is selected then sure that's what we want and "confirm" it
-                  -- (the "select = false" here is rather redundant and only added for emphasis.)
-                  return cmp.confirm({ select = false })
-                else
-                  -- otoh if we don't have anything selected then just close the completion pop-up
-                  -- imho this should be the default behaviour: it's so damn intuitive :-)
-                  return cmp.close()
-                end
-              end
-
-              default()
-            end
-          }
-        }),
-        sources = cmp.config.sources({
-          { name = 'path'    },
-          { name = 'cmdline', keyword_length = 3 }
-        }),
-        matching = { disallow_symbol_nonprefix_matching = false }
-      })
-    end
+    opts_extend = { "sources.default" }
   },
 
   {
