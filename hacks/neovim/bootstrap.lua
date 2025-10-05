@@ -145,8 +145,8 @@ require("lazy").setup({
         default = { 'lsp', 'path', 'snippets', 'buffer' },
       },
 
-      signature = { enabled = true, window = { border = "rounded" } }
-      fuzzy     = { implementation = 'lua' },
+      signature = { enabled = true, window = { border = "rounded" } },
+      fuzzy     = { implementation = 'lua' }
     },
 
     opts_extend = { "sources.default" }
