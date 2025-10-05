@@ -128,10 +128,19 @@ require("lazy").setup({
       },
 
       appearance = { nerd_font_variant = 'mono' },
-      completion = { documentation = { auto_show = false } },
+
+      completion = {
+        documentation = { auto_show = false },
+
+        menu = {
+          border = "rounded",
+          draw = { align_to = "none", columns = { { "kind_icon", "label", gap = 1 }, { "kind" } } }
+        }
+      },
 
       sources    = {
         min_keyword_length = 3,
+        -- https://github.com/Saghen/blink.cmp/issues/643
 
         default = { 'lsp', 'path', 'snippets', 'buffer' },
       },
