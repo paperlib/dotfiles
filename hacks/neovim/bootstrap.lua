@@ -130,7 +130,7 @@ require("lazy").setup({
       appearance = { nerd_font_variant = 'mono' },
 
       completion = {
-        documentation = { auto_show = false },
+        documentation = { auto_show = false, window = { border = "rounded" } },
 
         menu = {
           border = "rounded",
@@ -138,15 +138,15 @@ require("lazy").setup({
         }
       },
 
-      sources    = {
+      sources = {
         min_keyword_length = 3,
         -- https://github.com/Saghen/blink.cmp/issues/643
 
         default = { 'lsp', 'path', 'snippets', 'buffer' },
       },
 
-      fuzzy      = { implementation = 'lua' },
-      signature  = { enabled = true }
+      signature = { enabled = true, window = { border = "rounded" } }
+      fuzzy     = { implementation = 'lua' },
     },
 
     opts_extend = { "sources.default" }
