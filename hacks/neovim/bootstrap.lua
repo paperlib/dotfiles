@@ -20,6 +20,27 @@ vim.opt.guicursor:append('a:blinkon1') -- WTF.
 vim.keymap.set('n', '<f5>', '<cmd>:set paste!<cr>', { noremap = true, silent = true })
 vim.keymap.set('i', '<f5>', '<cmd>:set paste!<cr>', { noremap = true, silent = true })
 
+-- LSP
+-- since neovim 0.11 configuring LSPs is surprisingly simple
+-- so here we will leverage that and setup our LSPs from scratch using purely native nvim
+-- without the help of any plugins
+--
+-- https://lugh.ch/switching-to-neovim-native-lsp.html
+-- https://blog.diovani.com/technology/2025/06/13/configuring-neovim-011-lsp.html
+
+-- disable diagnostics for now
+vim.diagnostic.config({ signs = false })
+
+vim.lsp.config('*', { root_markers = { '.git' }, })
+
+vim.lsp.config('pyright', {
+  cmd = { 'pyright-langserver', '--stdio' }, filetypes = { 'python' },
+  root_markers = { 'setup.py', 'setup.cfg', 'requirements.txt', 'pyproject.toml' },
+})
+
+-- Enable it (this auto-starts and attaches on relevant buffers)
+vim.lsp.enable('pyright')
+
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
