@@ -33,13 +33,22 @@ vim.diagnostic.config({ signs = false })
 
 vim.lsp.config('*', { root_markers = { '.git' }, })
 
-vim.lsp.config('pyright', {
+-- note each lsp.config
+-- requires its own language server:
+--   * python:     npm install -g pyright
+--   * javascript: npm install -g typescript-language-server typescript
+vim.lsp.config('python', {
   cmd = { 'pyright-langserver', '--stdio' }, filetypes = { 'python' },
   root_markers = { 'setup.py', 'setup.cfg', 'requirements.txt', 'pyproject.toml' },
 })
 
--- Enable it (this auto-starts and attaches on relevant buffers)
-vim.lsp.enable('pyright')
+vim.lsp.config('javascript', {
+  cmd = { 'typescript-language-server', '--stdio' },
+  filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
+})
+
+-- enable them (this auto-starts and attaches on relevant buffers)
+vim.lsp.enable({'javascript', 'python'})
 
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
@@ -160,7 +169,7 @@ require("lazy").setup({
       },
 
       sources = {
-        min_keyword_length = 3,
+        min_keyword_length = 5,
         -- https://github.com/Saghen/blink.cmp/issues/643
 
         default = { 'lsp', 'path', 'snippets', 'buffer' },
