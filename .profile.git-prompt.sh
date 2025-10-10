@@ -8,7 +8,10 @@
 COLOR_GIT_SIGN='\[\033[01;38;5;230m\]'
 COLOR_GIT_BRANCH='\[\033[01;38;5;046m\]'
 COLOR_GIT_DIRTY='\[\033[01;38;5;215m\]'
+
 COLOR_RESET='\[\033[0m\]'
+# : "${VARIABLE:=DEFAULT_VALUE}"
+: "${COLOR_USER:=\[\033[01;32m\]}"
 
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
@@ -23,7 +26,7 @@ function git_prompt() {
 
 function prompt() {
   # -- include support for conda if we have it installed.
-  PS1="${CONDA_PROMPT_MODIFIER}\h:\u [ \w $(git_prompt)] \$ "
+  PS1="${CONDA_PROMPT_MODIFIER}\h:$COLOR_USER\u$COLOR_RESET [ \w $(git_prompt)] \$ "
 }
 
 PROMPT_COMMAND=prompt
