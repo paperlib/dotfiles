@@ -37,14 +37,14 @@ vim.lsp.config('*', { root_markers = { '.git' }, })
 -- requires its own language server:
 --   * python: uv tool install basedpyright <- of course use "basedpyright" and not "pyright"!!
 --     -> https://www.reddit.com/r/neovim/comments/1i7ssc8/desperate_for_a_good_lsp_for_python
---   * javascript: npm install -g typescript-language-server typescript
+--   * javascript: npm install -g @typescript/native-preview
 vim.lsp.config('python', {
   cmd = { 'basedpyright-langserver', '--stdio' }, filetypes = { 'python' },
   root_markers = { 'setup.py', 'setup.cfg', 'requirements.txt', 'pyproject.toml' },
 })
 
 vim.lsp.config('javascript', {
-  cmd = { 'typescript-language-server', '--stdio' },
+  cmd = { 'tsgo', '--lsp', '--stdio' },
   filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
 })
 
