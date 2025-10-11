@@ -74,6 +74,11 @@ require("lazy").setup({
   "tpope/vim-fugitive",
 
   {
+    "windwp/nvim-autopairs",
+    event = 'InsertEnter', opts = {},
+  },
+
+  {
     "lukas-reineke/indent-blankline.nvim", main = "ibl",
     opts = { indent = { char = "│" }, scope = { show_start = false } }
   },
