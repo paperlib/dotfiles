@@ -29,6 +29,7 @@ vim.keymap.set('i', '<f5>', '<cmd>:set paste!<cr>', { noremap = true, silent = t
 -- https://blog.diovani.com/technology/2025/06/13/configuring-neovim-011-lsp.html
 
 -- disable diagnostics for now
+-- https://vi.stackexchange.com/questions/45312/how-do-i-change-characters-used-nvim-diagnostics-signs
 vim.diagnostic.config({ signs = false })
 
 vim.lsp.config('*', { root_markers = { '.git' }, })
@@ -81,6 +82,15 @@ require("lazy").setup({
   {
     "lukas-reineke/indent-blankline.nvim", main = "ibl",
     opts = { indent = { char = "│" }, scope = { show_start = false } }
+  },
+
+  {
+    "rachartier/tiny-inline-diagnostic.nvim",
+    -- tbh we could just have gone with virtual_text = { current_line = true } in vim.diagnostic.config
+    -- but this has a few more "nice to haves" like diag message text wrapping when msg is too long.
+
+    event = "VeryLazy", priority = 1000,
+    config = function() require('tiny-inline-diagnostic').setup({ preset = "classic" }) end
   },
 
   {
@@ -141,6 +151,8 @@ require("lazy").setup({
       local configs = require("nvim-treesitter.configs")
 
       configs.setup({
+        ensure_installed = { "python", "javascript" },
+
         highlight = { enable = true },
         indent    = { enable = true }
       })
