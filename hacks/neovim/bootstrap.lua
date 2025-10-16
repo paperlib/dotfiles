@@ -151,7 +151,8 @@ require("lazy").setup({
       local configs = require("nvim-treesitter.configs")
 
       configs.setup({
-        ensure_installed = { "python", "javascript" },
+        -- ensure a C compiler (eg. cc, gcc, etc.) is available before enabling this
+        -- ensure_installed = { "python", "javascript" },
 
         highlight = { enable = true },
         indent    = { enable = true }
