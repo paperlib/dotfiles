@@ -183,7 +183,17 @@ require("lazy").setup({
 
         menu = {
           border = "rounded",
-          draw = { align_to = "none", columns = { { "kind_icon", "label", gap = 1 }, { "kind" } } }
+          draw = {
+            align_to = "none", columns = { { "kind_icon", "label", gap = 1 }, { "kind" }, { "source_name" } },
+            components = {
+              source_name = {
+                width = { max = 30 }, highlight = 'BlinkCmpSource', text = function(ctx)
+                  local name = ctx.item.client_id and " [" .. vim.lsp.get_client_by_id(ctx.item.client_id).name .. "]" or ""
+                  return ctx.source_name .. name
+                end,
+              },
+            }
+          }
         }
       },
 
