@@ -39,6 +39,9 @@ vim.lsp.config('*', { root_markers = { '.git' }, })
 --   * python: uv tool install basedpyright <- of course use "basedpyright" and not "pyright"!!
 --     -> https://www.reddit.com/r/neovim/comments/1i7ssc8/desperate_for_a_good_lsp_for_python
 --   * javascript: npm install -g @typescript/native-preview
+--   * solidity: there's not one *good* LSP for Solidity, so we use two:
+--       npm install -g solidity-ls                                # -> mainly diagnostics
+--       npm install -g @nomicfoundation/solidity-language-server  # -> for the rest.
 vim.lsp.config('python', {
   cmd = { 'basedpyright-langserver', '--stdio' }, filetypes = { 'python' },
   root_markers = { 'setup.py', 'setup.cfg', 'requirements.txt', 'pyproject.toml' },
@@ -49,8 +52,19 @@ vim.lsp.config('javascript', {
   filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
 })
 
+vim.lsp.config('solidity-diag', {
+  cmd = { 'solidity-ls', '--stdio' },
+  filetypes = { 'solidity' }, root_markers = { 'foundry.toml', 'remappings.txt' },
+  -- in project root, run: `forge remappings > remappings.txt`
+})
+
+vim.lsp.config('solidity', {
+  cmd = { 'nomicfoundation-solidity-language-server', '--stdio' },
+  filetypes = { 'solidity' }, root_markers = { 'foundry.toml', 'remappings.txt' },
+})
+
 -- enable them (this auto-starts and attaches on relevant buffers)
-vim.lsp.enable({'python', 'javascript'})
+vim.lsp.enable({'python', 'javascript', 'solidity-diag', 'solidity'})
 
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
