@@ -39,6 +39,7 @@ vim.lsp.config('*', { root_markers = { '.git' }, })
 --   * python: uv tool install basedpyright <- of course use "basedpyright" and not "pyright"!!
 --     -> https://www.reddit.com/r/neovim/comments/1i7ssc8/desperate_for_a_good_lsp_for_python
 --   * javascript: npm install -g @typescript/native-preview
+--   * html & css: npm install -g @olrtg/emmet-language-server
 --   * solidity: there's not one *good* LSP for Solidity, so we use two:
 --       npm install -g solidity-ls                                # -> mainly diagnostics
 --       npm install -g @nomicfoundation/solidity-language-server  # -> for the rest.
@@ -50,6 +51,11 @@ vim.lsp.config('python', {
 vim.lsp.config('javascript', {
   cmd = { 'tsgo', '--lsp', '--stdio' },
   filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
+})
+
+vim.lsp.config('emmet', {
+  cmd = { 'emmet-language-server', '--stdio' },
+  filetypes = { 'css', 'html', 'javascriptreact', 'typescriptreact' },
 })
 
 vim.lsp.config('solidity-diag', {
@@ -64,7 +70,7 @@ vim.lsp.config('solidity', {
 })
 
 -- enable them (this auto-starts and attaches on relevant buffers)
-vim.lsp.enable({'python', 'javascript', 'solidity-diag', 'solidity'})
+vim.lsp.enable({'python', 'javascript', 'emmet', 'solidity-diag', 'solidity'})
 
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
