@@ -7,14 +7,17 @@
 # -- https://zipcon.net/~swhite/docs/computers/linux/shell_prompts.html
 # --
 # -- https://superuser.com/questions/735660/whats-the-zsh-equivalent-of-bashs-prompt-command
+# -- https://blog.pixelastic.com/2023/01/14/zsh-variable-default-value
 if [ "$ZSH_NAME" = "zsh" ]; then
   # -- export PS1=$'\033[01;38;5;230m%n \$ '
   COLOR_GIT_SIGN='\033[01;38;5;230m'
   COLOR_GIT_BRANCH='\033[01;38;5;046m'
   COLOR_GIT_DIRTY='\033[01;38;5;215m'
 
+  COLOR_DEFAULT='%B%F{green}'
+
   COLOR_RESET='%f%b'
-  COLOR_USER='%B%F{green}'
+  COLOR_USER="${COLOR_USER:=$COLOR_DEFAULT}"
 
   PROMPT_HOST='%m'
   PROMPT_USER='%n'
@@ -24,10 +27,10 @@ else
   COLOR_GIT_BRANCH='\[\033[01;38;5;046m\]'
   COLOR_GIT_DIRTY='\[\033[01;38;5;215m\]'
 
+  COLOR_DEFAULT='\[\033[01;32m\]'
+
   COLOR_RESET='\[\033[0m\]'
-  # -- : "${VARIABLE:=DEFAULT_VALUE}"
-  # : "${COLOR_USER:=\[\033[01;32m\]}"
-  COLOR_USER='\[\033[01;32m\]'
+  COLOR_USER="${COLOR_USER:=$COLOR_DEFAULT}"
 
   PROMPT_HOST='\h'
   PROMPT_USER='\u'
