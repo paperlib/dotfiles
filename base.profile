@@ -30,6 +30,6 @@ alias egrep='egrep --color=auto'
 # -- https://stackoverflow.com/questions/50427449/behavior-of-arrays-in-bash-and-zsh
 ENVS=($HOME/.local/bin/env $HOME/.local/bin/env.*)
 for env in "${ENVS[@]}" ; do
-  . "$env"
+  test -f $env && . "$env"
 done
 
