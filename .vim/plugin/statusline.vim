@@ -13,9 +13,7 @@ hi CommandMode cterm=bold,reverse
 
 let g:currentmode={ "\<C-v>" : 'vb' }
 
-set statusline=
-
-set statusline+=%#NormalMode#%{(mode()==#'n')?'\ \ N\ ':''}
+set statusline=%#NormalMode#%{(mode()==#'n')?'\ \ N\ ':''}
 set statusline+=%#InsertMode#%{(mode()==#'i')?'\ \ I\ ':''}
 set statusline+=%#ReplaceMode#%{(mode()==#'R')?'\ \ R\ ':''}
 set statusline+=%#CommandMode#%{(mode()==#'c')?'\ \ C\ ':''}
