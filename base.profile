@@ -9,22 +9,25 @@
 # umask 022
 
 # -- .
-# -- personnal - defaults.
+# -- personal - defaults.
 export TERM=xterm-256color
 
-# -- personnal - clean random .dot files.
+# -- personal - clean random .dot files.
 export LESSHISTFILE=/dev/null  # -- .lesshst search history file
 alias wget='wget --hsts-file=$HOME/.cache/wget-hsts'
 
-# -- personnal - enable colors
+# -- personal - enable colors
 alias ls='ls --color=auto'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# -- personnal - git prompt
+# -- personal - git prompt
 . ~/.local/dotfiles/.profile.git-prompt.sh
+
+# -- personal - vim hacks
+. ~/.local/dotfiles/.vim/.profile.hacks
 
 # -- personnal - env
 # -- https://stackoverflow.com/questions/50427449/behavior-of-arrays-in-bash-and-zsh
