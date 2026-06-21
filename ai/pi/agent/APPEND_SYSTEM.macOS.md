@@ -12,4 +12,4 @@ Key differences from Linux:
 
 Assume Apple Silicon macOS unless the user explicitly says otherwise. Do not try Linux-only commands first.
 
-IMPORTANT: when chosing a Neovim instance always use the pi-ask-user tool
+IMPORTANT: when chosing a Neovim instance always use the ask-user tool (pi-ask-user) when available
